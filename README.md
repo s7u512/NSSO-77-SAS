@@ -24,7 +24,7 @@ The data used in these scripts are from the 2019 round of the Situation Assessme
 
 I have prepared some lists based on the documentation (for example column names and their widths for each level is made into one spreadsheet) to be used in the calculations. These files are uploaded here along with the scripts. Nonetheless it is recommended that a beginner learns to prepare such files themselves by going through the documentation.
 
-## 2.2 Analysis Process
+### 2.2 Analysis Process
 
 The calculations in these scripts are performed after applying sample weights provided by the NSSO.
 
