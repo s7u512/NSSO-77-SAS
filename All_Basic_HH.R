@@ -15,7 +15,6 @@
 #  The weights of Visit 2 have to be used while combining data from both visits. (This is stated in the documentation as well.)
 #  Aside: Excel tables can be downloaded from page 175 of the report by clicking on the hyperlinks. (It is possible that MoSPI does not host them at the time of your viewing. In that case, use archive.org)
 
-
 rm(list = ls())         # clear the environment
 
 #  Load packages
