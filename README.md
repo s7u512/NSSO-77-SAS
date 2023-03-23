@@ -1,6 +1,6 @@
 # Situation Assessment Survey of Agricultural Households (2019) Estimation Scripts
 
-These R scripts were developed as a personal project to learn sample survey estimation using R. The scripts were heavily influenced by my friend Deepak's work on the same topic. I started out trying to replicate his work. However, I have ended up deviating  enough to not be able to call it a fork anymore, and therefore decided to create my own repository. The scripts are simple and heavily commented to be useful to beginners. I used RStudio, an IDE for R to do this work.
+These R scripts were developed as a personal project to learn sample survey estimation using R. The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work. However, I have ended up deviating  enough to not be able to call it a fork anymore, and therefore decided to create my own repository. The scripts are simple and heavily commented to be useful to beginners. I used RStudio, an IDE for R to do this work.
 
 These scripts are designed to estimate the results of the Situation Assessment Survey of Agricultural Households conducted by NSSO in 2019. The scripts are specifically tailored to work with the published data from this survey.
 
@@ -75,4 +75,4 @@ This work is distributed in the hope that it will be useful, but WITHOUT ANY WAR
 
 ## 7. Acknowledgements
 
-These scripts were inspired by the work of Deepak Johnson. I would like to thank Deepak for his initial work and guidance in this project. Thanks are due also to friends and other colleagues from the [Foundation for Agrarian Studies](https://fas.org.in/) for all their help.
+These scripts were inspired by [the work of Deepak Johnson](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I would like to thank Deepak for his initial work and guidance in this project. Thanks are due also to friends and other colleagues from the [Foundation for Agrarian Studies](https://fas.org.in/) for all their help.
