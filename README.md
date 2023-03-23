@@ -43,9 +43,9 @@ The analysis can be conducted in the following order:
     All_Basic_HH.R 									- this script creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits.
 	Crop_Income.R 									- this script calculates the crop income using the paid-out approach.
 	Animal_Income.R 								- this script calculates animal income using the paid-out approach.
-	NonFarm_Business_Income.R 						- this script calculates income from non-farm businesses.
+	NonFarm_Business_Income.R 							- this script calculates income from non-farm businesses.
 	Other_Income.R 									- this script calculates other incomes such as Wages, Rents and Pensions.
-    Household_Income_of_Agricultural_Households.R 	- this script combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes.
+    Household_Income_of_Agricultural_Households.R 					- this script combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes.
 
 ### 3.2 Supporting files
 
@@ -54,9 +54,9 @@ These are the supporting files prepared based on the documentation, for use in t
     List_Level_Codes.xlsx 							- contains the widths specified by NSS for data extraction, as given in the "NSS_77th_Layout_Sch_33.1_mult_post.xls" file provided on the NSSO website.
     List_State.xlsx 								- contains codes for States.
     List_Social_Group.xlsx 							- contains codes for social groups.
-    List_HH_Classification.xlsx 					- contains codes for household classification (e.g., self-employed in crop production).
+    List_HH_Classification.xlsx 						- contains codes for household classification (e.g., self-employed in crop production).
     List_Religion.xlsx 								- contains codes for religion.
-	List_Crop_Code.xlsx								- contains codes for crops (it has two lists - one for MSP Crops alone, and one for all crops.) This list is not used in the given code here, but will be of use when analysing cropwise data.
+	List_Crop_Code.xlsx							- contains codes for crops (it has two lists - one for MSP Crops alone, and one for all crops.) This list is not used in the given code here, but will be of use when analysing cropwise data.
 
 
 ## 4. Disclaimer
