@@ -20,9 +20,13 @@ In this workbook, I use the information given in the documentation to calculate 
 
 ### 2.1 Data Extraction
 
-The data used in these scripts are from the 2019 round of the Situation Assessment Survey of Agricultural Households conducted by the National Sample Survey Office (NSSO) in India. The NSSO provides the raw data in fixed width files along with documentation on how to read them, including information about the column names and their respective widths.
+The data used in these scripts are from the 2019 round of the Situation Assessment Survey of Agricultural Households conducted by the National Sample Survey Office (NSSO) in India. The NSSO provides unit level raw data in fixed width files along with documentation on how to read them, including information about the widths of different columns and their respective column names.
 
 I have prepared some lists based on the documentation (for example column names and their widths for each level is made into one spreadsheet) to be used in the calculations. These files are uploaded here along with the scripts. Nonetheless it is recommended that a beginner learns to prepare such files themselves by going through the documentation.
+
+This documentation is used to read the unit level data into data frames, which can be manipulated and exported. 
+
+NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks. The relevant information is brought together to estimate monthly household incomes in this exercise. 
 
 ### 2.2 Analysis Process
 
