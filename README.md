@@ -1,4 +1,4 @@
-# Situation Assessment Survey of Agricultural Households (2019) Estimation Scripts
+# Estimation Scripts for Situation Assessment Survey of Agricultural Households (2019) (77th round of National Sample Surveys of India)
 
 These R scripts were developed as a personal project to learn sample survey estimation using R. The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work. However, I have ended up deviating  enough to not be able to call it a fork anymore, and therefore decided to create my own repository. The scripts are simple and heavily commented to be useful to beginners. I used RStudio, an IDE for R to do this work.
 
@@ -28,13 +28,15 @@ This documentation is used to read the unit level data into data frames, which c
 
 NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks. The relevant information is brought together to estimate monthly household incomes in this exercise. 
 
-### 2.2 Analysis Process
+### 2.2 Estimation
 
 The calculations in these scripts are performed after applying sample weights provided by the NSSO.
 
-The idea is to seperately calculate different components of household income and then merge them together to calculate the monthly household income of the agricultural households. Thus, The income for each component (income from crop production, animal resources, etc.) is computed separately using the appropriate weights and other relevant variables. These component datasets are then combined together to obtain the household income.
+The idea is to seperately calculate different components of household income and then merge them together to calculate the monthly household income of the agricultural households. Thus, The income from each component (such as income from crop production, income from wages, etc.) is computed separately using the appropriate weights and other relevant variables. These component datasets are then combined together to obtain the household income.
 
 The scripts are heavily commented and should be easy to follow, even for those with limited experience in R. Note that the scripts are specifically tailored to work with the published data from the 2019 round of the survey.
+
+The scope of this exercise concludes at estimating monthly household incomes of agricultural households in India during the agricultural year 2018-19. However, the idea is that if a beginner is able to follow through this they would be equipped to carry out further analysis as required.
 
 ## 3. Contents
 
