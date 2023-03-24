@@ -44,36 +44,9 @@ Despite the limited scope, the idea is that if a beginner is able to follow thro
 
 ## 3. Contents
 
-### 3.1 Scripts 
-
+Start by reading [Instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
 The six R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. 
-
-The analysis can be conducted in the following order:
-
-| File Name               | Description                                                                                     |
-|------------------------|-------------------------------------------------------------------------------------------------|
-| 01_All_Basic_HH.R         | Creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits. |
-| 02_Crop_Income.R           | Calculates the crop income using the paid-out approach.                              |
-| 03_Animal_Income.R         | Calculates animal income using the paid-out approach.                                 |
-| 04_NonFarm_Business_Income.R | Calculates income from non-farm businesses.                                           |
-| 05_Other_Income.R          | Calculates other incomes such as Wages, Rents and Pensions.                           |
-| 06_HH_Income_of_AH.R       | Combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes. |
-
-
-### 3.2 Supporting files
-
-These are the supporting files prepared based on the documentation, for use in the scripts. 
-
-| File Name                    | Description                                                                                                                               |
-|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| List_Level_Codes.xlsx        | Contains the widths specified by NSS for data extraction, as given in the documentation. |
-| List_State.xlsx              | Contains codes for States.                                                                                                                |
-| List_Social_Group.xlsx       | Contains codes for social groups.                                                                                                          |
-| List_HH_Classification.xlsx | Contains codes for household classification (e.g., self-employed in crop production).                                                      |
-| List_Religion.xlsx           | Contains codes for religion.                                                                                                               |
-| List_Crop_Code.xlsx          | Contains codes for crops (it has two lists - one for MSP Crops alone, and one for all crops.) This list is not used in the given code here, but will be of use when analysing cropwise data. |
-
-
+There are a few supporting files prepared based on the documentation, for use in the scripts. I recommend that beginners learn how to create these files on their own.
 
 
 ## 4. Disclaimer
