@@ -49,10 +49,11 @@ L7_V1 <- read_fwf("Raw data/r77s331v1L07.txt",
 # Add column names to the data frame after sanitizing them as valid variable names
 colnames(L7_V1) <- make.names(Level7Codes$Name)
 
-
 # Create a common ID for all households as per documentation.
 L7_V1 <- L7_V1 %>%
   mutate(HH_ID = paste(FSU.Serial.No.,Second.stage.stratum.no.,Sample.hhld..No., sep = "0"))
+
+
 
 # Now level 8
 L8_V1 <- read_fwf("Raw data/r77s331v1L08.txt", 
@@ -68,6 +69,7 @@ colnames(L8_V1) <- make.names(Level8Codes$Name)
 # Create a common ID for all households as per documentation.
 L8_V1 <- L8_V1 %>%
   mutate(HH_ID = paste(FSU.Serial.No.,Second.stage.stratum.no.,Sample.hhld..No., sep = "0"))
+
 
 
 
@@ -105,6 +107,10 @@ CropIncome_V1 <- CropIncome_V1 %>%
 
 
 
+
+
+
+
 # Now visit 2
 
 # Load data
@@ -118,10 +124,10 @@ L7_V2 <- read_fwf("Raw data/r77s331v2L07.txt",
 # Add column names to the data frame after sanitizing them as valid variable names
 colnames(L7_V2) <- make.names(Level7Codes$Name)
 
-
 # Create a common ID for all households as per documentation.
 L7_V2 <- L7_V2 %>%
   mutate(HH_ID = paste(FSU.Serial.No.,Second.stage.stratum.no.,Sample.hhld..No., sep = "0"))
+
 
 
 # Load data
@@ -135,7 +141,6 @@ L8_V2 <- read_fwf("Raw data/r77s331v2L08.txt",
 # Add column names to the data frame after sanitizing them as valid variable names
 colnames(L8_V2) <- make.names(Level8Codes$Name)
 
-
 # Create a common ID for all households as per documentation.
 L8_V2 <- L8_V2 %>%
   mutate(HH_ID = paste(FSU.Serial.No.,Second.stage.stratum.no.,Sample.hhld..No., sep = "0"))
@@ -148,6 +153,10 @@ CropIncome_V2 <- left_join(Common_HH_Basic, L7_V2 %>%
                              select(HH_ID, total.value..Rs..),         # Only selecting HH_ID and total value columns
                            by = "HH_ID") 
 
+
+
+
+
 # Next we add costs from Level 8 to that
 CropIncome_V2 <- left_join(CropIncome_V2, L8_V2 %>%
                              filter(Serial.no. == 22) %>%
@@ -155,13 +164,15 @@ CropIncome_V2 <- left_join(CropIncome_V2, L8_V2 %>%
                            by = "HH_ID"
                            )
 
-
 # Replace NAs
 CropIncome_V2[is.na(CropIncome_V2)] <- 0
 
 
 # Calculate Crop income by taking the difference between GVO and costs
 CropIncome_V2$CropIncome = CropIncome_V2$total.value..Rs.. - CropIncome_V2$Inputs.paid.out.expenses
+
+
+
 
 # Now for total crop income  
 # We join both V1 and V2 crop incomes.
@@ -178,7 +189,9 @@ CropIncome$TotalCropIncome = CropIncome$CropIncome.x + CropIncome$CropIncome.y
 
 # Create a subset of crop incomes for agricultural households
 AH_CropIncome <- CropIncome %>% filter(HH_ID %in% AH_Common_HH_Basic$HH_ID)
-    
+
+
+
 # Test the results
 
 # Let us check the monthly Crop Income from Visit 1. For this, we take the weighted mean of the crop incomes and weights from visit 1, and divide it by 6 because it is for 6 months.
