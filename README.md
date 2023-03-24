@@ -10,7 +10,7 @@ The National Sample Survey Office under the Ministry of Statistics and Programme
 1. [Situation Assessment Survey of Agricultural Households 2019: A Statistical Note by Aparajita Bakshi](http://ras.org.in/situation_assessment_survey_of_agricultural_households_2019_a_statistical_note)
 2. [The Situation Assessment Surveys: An Evaluation by Biplab Sarkar](http://ras.org.in/index.php?Article=the_situation_assessment_surveys&q=biplab&keys=biplab)
 
-The full list of unit-level datasets and documentation associated with NSS 77th Round Situation Assessment Survey this can be found [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT).
+The full list of unit-level datasets and documentation associated with NSS 77th Round Situation Assessment Survey this can be found [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT) or [here](https://mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock).
 Please remember that archive.org can be used to access the website links if needed.
 
 In this workbook, I use the information given in the documentation to calculate the monthly income of agricultural households using the unit-level data.
