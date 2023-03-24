@@ -60,10 +60,13 @@ These are the supporting files prepared based on the documentation, for use in t
 
 # 4. Running the Scripts
 
-After these folders are made, bring all the six scripts and the six lists and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
-Open the first script using RStudio or R. 
-Run the script. 
-Repeat the process for all the scripts in order.
+After these folders are made, 
+
+1. Bring all the six scripts and the six lists and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
+2. Open the first script using RStudio or R. 
+3. Read through the script.
+4. Run the script. 
+5. Repeat the process for all the scripts in order.
 
 You are done. 
-The outputs will be generated in the /Output folder.
+The outputs will be generated in the Output folder.
