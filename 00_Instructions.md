@@ -4,24 +4,18 @@ Read this document first to get started.
 
 ## 1. Requirements
 
-1. Download and Install R
+1. Download and Install R: You can download and install R from [here](https://cloud.r-project.org/). We recommend downloading and installing an Integrated Development Environment for R. We used [RStudio](https://posit.co/products/open-source/rstudio/) in our exercise.
 
-You can download and install R from [here](https://cloud.r-project.org/). We recommend downloading and installing an Integrated Development Environment for R. We used [RStudio](https://posit.co/products/open-source/rstudio/) in our exercise.
-
-2. Download the Data
-
-Get the raw data and other documentation for this survey. We have provided some links for this in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but you may need to find different links at the time of viewing this.
+2. Download the Data: Get the raw data and other documentation for this survey. We have provided some links for this in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but you may need to find different links at the time of viewing this.
 
 NSSO provides the unit level data as fixed width text files. The data is split into multiple levels for each visit (There are two visits). Download everything. NSSO also provides a spreadsheet that contains the layout information. This includes the widths of different variables and their names, the information contained in each level, and some other less relevant information.
 
-3. Prepare lists
-
-In the future I will be documenting how to use the documentation to prepare the lists that we have prepared and provided in this repo to help with the analysis. For now you can use the lists I have already provided. However, I strognly suggest the beginner to go through the documentation provided along with the unit level data to prepare these lists.
+3. Prepare lists: In the future I will be documenting how to use the documentation to prepare the lists that we have prepared and provided in this repo to help with the analysis. For now you can use the lists I have already provided. However, I strognly suggest the beginner to go through the documentation provided along with the unit level data to prepare these lists.
 
 
 ## 2. Folder Structure
 
-ecide on a working directory (a folder/directory in which you will do the work). For example I used `/home/user/Desktop/SAS2019` for my exercise. The scripts provided here assume the following folder structure in the working directory:
+Decide on a working directory (a folder/directory in which you will do the work). For example I used `/home/user/Desktop/SAS2019` for my exercise. The scripts provided here assume the following folder structure in the working directory:
 
 - `/home/user/Desktop/SAS2019/Raw Data`: All the raw data are stored here, including all levels from both visits.
 - `/home/user/Desktop/SAS2019/Output`: This can be an empty folder to begin with. It will get populated with all the calculated data frames in the form of .csv and .RData files as we execute the scripts.
