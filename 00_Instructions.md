@@ -63,7 +63,7 @@ After these folders are made,
 1. Bring all the six scripts and the six lists and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
 2. Open the first script using RStudio or R. 
 3. Read through the script.
-4. Change the line `setwd("path/to/working/directory")` to the path to your working directory (In my case `setwd("/home/user/Desktop/SAS2019")`
+4. Change the line ```setwd("path/to/working/directory")``` to the path to your working directory (In my case ```setwd("/home/user/Desktop/SAS2019")```
 5. Run the script. 
 6. Save the file.
 7. Repeat the steps 2 to 6 for all the scripts in order.
