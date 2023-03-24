@@ -51,7 +51,7 @@ There are a few supporting files prepared based on the documentation, for use in
 
 ## 4. Disclaimer
 
-As a beginner in R and sample survey estimation. I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please let me know if you spot any issues or have suggestions for improvement. I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) or [reach out](https://twitter.com/all_awry).
+I am a beginner in both R and sample survey estimation. I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please let me know if you spot any issues or have suggestions for improvement. I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) or [reach out](https://twitter.com/all_awry).
 
 ## 5. Contributing
 
