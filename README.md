@@ -50,18 +50,15 @@ The six R scripts in this repository contain the code and comments for reading, 
 
 The analysis can be conducted in the following order:
 
-#### 1. All_Basic_HH.R
-This script creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits.
-#### 2. Crop_Income.R
-This script calculates the crop income using the paid-out approach.
-#### 3. Animal_Income.R
-This script calculates animal income using the paid-out approach.
-#### 4.	NonFarm_Business_Income.R
-This script calculates income from non-farm businesses.
-#### 5.	Other_Income.R
-This script calculates other incomes such as Wages, Rents and Pensions.
-#### 6. HH_Income_of_AH.R
-This script combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes.
+| File Name               | Description                                                                                     |
+|------------------------|-------------------------------------------------------------------------------------------------|
+| All_Basic_HH.R         | This script creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits. |
+| Crop_Income.R           | This script calculates the crop income using the paid-out approach.                              |
+| Animal_Income.R         | This script calculates animal income using the paid-out approach.                                 |
+| NonFarm_Business_Income.R | This script calculates income from non-farm businesses.                                           |
+| Other_Income.R          | This script calculates other incomes such as Wages, Rents and Pensions.                           |
+| HH_Income_of_AH.R       | This script combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes. |
+
 
 ### 3.2 Supporting files
 
