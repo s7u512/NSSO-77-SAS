@@ -60,7 +60,7 @@ This script calculates animal income using the paid-out approach.
 This script calculates income from non-farm businesses.
 #### 5.	Other_Income.R
 This script calculates other incomes such as Wages, Rents and Pensions.
-#### 6. Household_Income_of_Agricultural_Households.R
+#### 6. HH_Income_of_AH.R
 This script combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes.
 
 ### 3.2 Supporting files
