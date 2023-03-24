@@ -24,7 +24,7 @@ In this workbook, I use the information given in the documentation to calculate 
 
 The National Statistcal Survey Office (NSSO) provides unit-level raw data in fixed width files along with documentation on how to read them, such as information about the widths of different columns and their respective column names.
 
-This survey conatins household level information of a sample of the population of India, from two visits in 2019. All of these files use data from both survey visits. 
+This survey conatins household level information of a sample of the population of India, from two visits in 2019. All of the scripts here use data from both survey visits. 
 NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks.
 
 Using the provided documentation, the unit-level data is read into data frames, which can be manipulated, exported, and merged. 
@@ -40,7 +40,7 @@ The scope of this exercise concludes at estimating monthly household incomes of 
 
 The scripts are heavily commented and should be easy to follow, even for those with limited experience in R. Note that the scripts are specifically tailored to work with the published data from the 2019 round of the survey.
 
-Despite the limited scope, the idea here is that if a beginner is able to follow through this exercise they would be equipped to carry out further analysis as required.
+Despite the limited scope, the idea is that if a beginner is able to follow through this exercise they would be equipped to carry out further analysis as required.
 
 ## 3. Contents
 
