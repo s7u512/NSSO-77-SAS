@@ -73,4 +73,4 @@ The outputs will be generated in the Output folder.
 
 
 
-Thanks for reading. Please reach out if the instructions are not clear enough. Feel free to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) if you come across any.
+Thanks for reading. Please [reach out](https://twitter.com/all_awry) if the instructions are not clear enough. Feel free to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) if you come across any.
