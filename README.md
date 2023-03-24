@@ -4,9 +4,9 @@ These R scripts were developed as a personal project to learn sample survey esti
 
 These scripts are designed to estimate the results of the Situation Assessment Survey of Agricultural Households conducted by NSSO in 2019 - also known as NSS 77 th Round for Schedule- 33.1, January 2019 – December 2019,(Land and Livestock Holding of Households and Situation Assessment of Agricultural Households). The scripts are specifically tailored to work with the published data from this survey.
 
-## 1. Situation Assessment Survey of Agricultural Households (2019)
+## 1. Situation Assessment of Agricultural Households (2019)
 
-The National Sample Survey Office under the Ministry of Statistics and Programme Implementation of Government of India is responsible for the conduct of large scale sample surveys in diverse fields on an all India basis. They conducted their 77th Round of surveys in 2018-19. Among different topics covered in this round was the assessment of farming conditions in India. This was covered in Scheduled 33.1. A brief review of this survey and some results from the past can be found in the two links given below. 
+The National Sample Survey under the Ministry of Statistics and Programme Implementation of Government of India is responsible for the conduct of large scale sample surveys in diverse fields on an all India basis. They conducted their 77th Round of surveys in 2018-19. Among different topics covered in this round was the assessment of farming conditions in India. This was covered in Scheduled 33.1. A brief review of this survey and some results from the past can be found in the two links given below. 
 1. [Situation Assessment Survey of Agricultural Households 2019: A Statistical Note by Aparajita Bakshi](http://ras.org.in/situation_assessment_survey_of_agricultural_households_2019_a_statistical_note)
 2. [The Situation Assessment Surveys: An Evaluation by Biplab Sarkar](http://ras.org.in/index.php?Article=the_situation_assessment_surveys&q=biplab&keys=biplab)
 
@@ -70,7 +70,7 @@ These are the supporting files prepared based on the documentation, for use in t
 
 ## 4. Disclaimer
 
-As a beginner in R and sample survey estimation, I have done my best to keep the code uniform and well-commented. However, there may be mistakes or better ways to approach the analysis. Please let me know if you spot any issues or have suggestions for improvement. I have not done an exhaustive check of formatting consistency or other potential issues, so please don't hesitate to reach out if you have any questions or concerns.
+As a beginner in R and sample survey estimation. I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please let me know if you spot any issues or have suggestions for improvement. I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to reach out if you have any questions or concerns.
 
 ## 5. Contributing
 
