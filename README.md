@@ -52,12 +52,12 @@ The analysis can be conducted in the following order:
 
 | File Name               | Description                                                                                     |
 |------------------------|-------------------------------------------------------------------------------------------------|
-| 01_All_Basic_HH.R         | This script creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits. |
-| 02_Crop_Income.R           | This script calculates the crop income using the paid-out approach.                              |
-| 03_Animal_Income.R         | This script calculates animal income using the paid-out approach.                                 |
-| 04_NonFarm_Business_Income.R | This script calculates income from non-farm businesses.                                           |
-| 05_Other_Income.R          | This script calculates other incomes such as Wages, Rents and Pensions.                           |
-| 06_HH_Income_of_AH.R       | This script combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes. |
+| 01_All_Basic_HH.R         | Creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits. |
+| 02_Crop_Income.R           | Calculates the crop income using the paid-out approach.                              |
+| 03_Animal_Income.R         | Calculates animal income using the paid-out approach.                                 |
+| 04_NonFarm_Business_Income.R | Calculates income from non-farm businesses.                                           |
+| 05_Other_Income.R          | Calculates other incomes such as Wages, Rents and Pensions.                           |
+| 06_HH_Income_of_AH.R       | Combines crop income, animal income, wage, rent, and non-farm business income to calculate household incomes. |
 
 
 ### 3.2 Supporting files
