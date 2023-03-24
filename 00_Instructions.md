@@ -1,4 +1,4 @@
-# Getting Started
+# Instructions
 
 Read this document first to get started.
 
