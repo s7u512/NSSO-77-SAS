@@ -4,23 +4,27 @@ Read this document first to get started.
 
 ## 1. Requirements
 
-You can download and install R from [here](https://cloud.r-project.org/)
-I highly recommend downloading and installing an Integrated Development Environment for R. I used [RStudio](https://posit.co/products/open-source/rstudio/) in my exercise.
+1. Download and Install R
 
-Get the raw data and other documentation for this survey. (I have provided some links for this in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), however you may need to find different links at the time of viewing this.)
+You can download and install R from [here](https://cloud.r-project.org/). We recommend downloading and installing an Integrated Development Environment for R. We used [RStudio](https://posit.co/products/open-source/rstudio/) in our exercise.
 
-NSSO provides the unit level data as fixed width text files. The data is split into multiple levels for each visit (There are two visits). Download everything. 
-NSSO provides a spreadsheet that contains the layout information. This includes the widths of different variables and their names, the information contained in each level, and some other less relevant information.
+2. Download the Data
 
-In the future I will be documenting how to use this file to prepare the lists that I have prepared and provided in this repo to help with the analysis.
+Get the raw data and other documentation for this survey. We have provided some links for this in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but you may need to find different links at the time of viewing this.
+
+NSSO provides the unit level data as fixed width text files. The data is split into multiple levels for each visit (There are two visits). Download everything. NSSO also provides a spreadsheet that contains the layout information. This includes the widths of different variables and their names, the information contained in each level, and some other less relevant information.
+
+3. Prepare lists
+
+In the future I will be documenting how to use the documentation to prepare the lists that we have prepared and provided in this repo to help with the analysis. For now you can use the lists I have already provided. However, I strognly suggest the beginner to go through the documentation provided along with the unit level data to prepare these lists.
+
 
 ## 2. Folder Structure
 
-Decide a working directory (a folder/directory in which you will do the work. I have used `/home/user/Desktop/SAS2019` as my folder.
-The scripts provided here assumes the following folder structure in the working directory:
-`/home/user/Desktop/SAS2019/Raw Data` in which all the raw data are stored, including all levels from both visits
-`/home/user/Desktop/SAS2019/Output` which can be empty to begin with. This will get populated with all the calculated data frames in the form of .csv and .RData files as we execute the scripts.
+ecide on a working directory (a folder/directory in which you will do the work). For example I used `/home/user/Desktop/SAS2019` for my exercise. The scripts provided here assume the following folder structure in the working directory:
 
+- `/home/user/Desktop/SAS2019/Raw Data`: All the raw data are stored here, including all levels from both visits.
+- `/home/user/Desktop/SAS2019/Output`: This can be an empty folder to begin with. It will get populated with all the calculated data frames in the form of .csv and .RData files as we execute the scripts.
 
 
 ## 3. Contents
@@ -65,8 +69,14 @@ After these folders are made,
 1. Bring all the six scripts and the six lists and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
 2. Open the first script using RStudio or R. 
 3. Read through the script.
-4. Run the script. 
-5. Repeat the process for all the scripts in order.
+4. Change the line `setwd("path/to/working/directory")` to the path to your working directory (In my case `setwd("/home/user/Desktop/SAS2019")`
+5. Run the script. 
+6. Save the file.
+7. Repeat the steps 2 to 6 for all the scripts in order.
 
 You are done. 
 The outputs will be generated in the Output folder.
+
+
+
+Thanks for reading. Please reach out if the instructions are not clear enough. Feel free to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) if you come across any.
