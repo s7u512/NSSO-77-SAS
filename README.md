@@ -6,7 +6,7 @@ These scripts are designed to estimate the results of the Situation Assessment S
 
 ## 1. Situation Assessment Survey of Agricultural Households (2019)
 
-India's National Sample Survey Organisation conducted its 77th Round of surveys in 2018-19. Among different topics covered in this round was the assessment of farming conditions in India. A brief review of the surveys and some results from the past can be found in the two links given below. 
+The National Sample Survey Office under the Ministry of Statistics and Programme Implementation of Government of India is responsible for the conduct of large scale sample surveys in diverse fields on an all India basis. They conducted their 77th Round of surveys in 2018-19. Among different topics covered in this round was the assessment of farming conditions in India. A brief review of this survey and some results from the past can be found in the two links given below. 
 1. [Situation Assessment Survey of Agricultural Households 2019: A Statistical Note by Aparajita Bakshi](http://ras.org.in/situation_assessment_survey_of_agricultural_households_2019_a_statistical_note)
 2. [The Situation Assessment Surveys: An Evaluation by Biplab Sarkar](http://ras.org.in/index.php?Article=the_situation_assessment_surveys&q=biplab&keys=biplab)
 
