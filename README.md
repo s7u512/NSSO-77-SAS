@@ -6,7 +6,7 @@ These scripts are designed to estimate the results of the Situation Assessment S
 
 The scripts are specifically tailored to work with the published unit-level data from this survey.
 
-## 1. Land and Livestock Holding of Households and Situation Assessment of Agricultural Households (2019)
+## 1. Situation Assessment of Agricultural Households (2019)
 
 [National Sample Survey](https://www.mospi.gov.in/national-sample-survey-nss) under the Ministry of Statistics and Programme Implementation of Government of India is responsible for the conduct of large scale sample surveys in diverse fields on an all India basis. They conducted their 77th Round of surveys in 2018-19. Among different topics covered in this round was the assessment of farming conditions in India. This was covered in Scheduled 33.1. [A report](https://ruralindiaonline.org/en/library/resource/situation-assessment-of-agricultural-households-and-land-and-livestock-holdings-of-households-in-rural-india/) along with the unit-level data, was published by the National Statistical Office in September 2021.  A brief review of this survey and some results from the past can be found in the two links given below. 
 1. [Situation Assessment Survey of Agricultural Households 2019: A Statistical Note by Aparajita Bakshi](http://ras.org.in/situation_assessment_survey_of_agricultural_households_2019_a_statistical_note)
