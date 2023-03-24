@@ -42,7 +42,7 @@ The scripts are heavily commented and should be easy to follow, even for those w
 
 Despite the limited scope, the idea is that if a beginner is able to follow through this exercise they would be equipped to carry out further analysis as required.
 
-## 3. Contents
+## 3. Contents and Usage
 
 Start by reading [Instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
 The six R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. 
