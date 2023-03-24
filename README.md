@@ -55,7 +55,7 @@ I am a beginner in both R and sample survey estimation. I have done my best to k
 
 ## 5. Contributing
 
-These scripts were designed for personal use, but if you would like to contribute to this project, feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to be a more generalisable guide towards sample survey estimations through R. If anyone is interested let me know/contribute.
+These scripts were designed for personal use, but if you would like to contribute to this project, feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to be a more generalisable guide towards sample survey estimations through R. If anyone is interested [let me know](https://twitter.com/all_awry)/contribute.
 
 
 ## 6. License
