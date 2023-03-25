@@ -1,4 +1,4 @@
-#  =================== Estimating Basic Figures and Identifying Agricultural Households - SAS Data - 77th Round of NSSO =================== # 
+#  =================== Finding and Making a List of Agricultural Households - SAS Data - 77th Round of NSSO =================== # 
 
 # Author: Sethu C. A.
 # License: GNU GPLv3
@@ -142,16 +142,124 @@ L3_V1 %>%
 
 # Now we will select the relevant columns alone from this data set and save it as the list of all households with basic info
 
-All_HH_Basic <- L3_V1[,c("HH_ID", "State", "Weights_V1", "Household.size","Religion.code", "Social.group.code", "Household.classification..code", "dwelling.unit.code", "type.of.structure", "value.of.agricultural.production.from.self.employment.activities.during.the.last.365.days.code." )]
+All_HH_Basic <- L3_V1[,c("HH_ID", "State", "Weights_V1", "Household.size","Religion.code", "Social.group.code", "Household.classification..code", "value.of.agricultural.production.from.self.employment.activities.during.the.last.365.days.code." )]
 
 
 # Replace NA with 0
 
 All_HH_Basic[is.na(All_HH_Basic)] <- 0
 
+
+
+
+
+# Task: Get and add land size classification to this
+
+# Land information is provided in Block 5 in the data, which is in Level 4. Let us load this now.
+
+# Read the corresponding level codes into a data frame
+Level4Codes <- read_excel("List_Level_Codes.xlsx", sheet = "Level4") 
+
+# Load the data for given level from the fixed width file provided into a data frame using the byte lengths provided in the level codes file
+# The name of the data frame has the following logic: Level 7 in Visit 1
+L4_V1 <- read_fwf("Raw data/r77s331v1L04.txt", 
+                  fwf_widths(widths = Level4Codes$Length),
+                  col_types = cols(
+                    X12 = col_character(),                 #RANT from before
+                    .default = col_number()
+                  ))
+
+# Add column names to the data frame after sanitizing them as valid variable names
+colnames(L4_V1) <- make.names(Level4Codes$Name)
+
+# Create a common ID for all households as per documentation.
+L4_V1 <- L4_V1 %>%
+  mutate(HH_ID = paste(FSU.Serial.No.,Second.stage.stratum.no.,Sample.hhld..No., sep = "0"))
+
+# Make a new column called "Weights" for weights (the formula for this is provided in the documentation)
+L4_V1 <- L4_V1 %>% 
+  mutate(Weights_V1 = Multiplier/100)
+
+# Round off Weights
+L4_V1$Weights_V1 <- round(L4_V1$Weights_V1, digits =1)
+
+# Issue: The following code will show that there are 57978 households recorded in this level (which is 57 less than the total number of households sampled) L4_V1 %>% distinct(HH_ID) %>% n_distinct() 
+
+# DEFINITION: Out of various categories of land reported against a rural household, land which are ‘owned and possessed’, ‘leased-in’ and ‘otherwise possessed’ are combined and termed as ‘land possessed’ by the household. (3.1.2.1 on Page 46 (76/4264))
+
+# Create a new data frame with just the land information. 
+Land_categorization <- L4_V1 %>%
+  group_by(HH_ID) %>%
+  summarise(
+    land_possessed_acres = sum(area.of.land..0.00.acre.[Srl.No. %in% c(1,2,3,4)], na.rm = TRUE)
+  )
+
+# Explanation for the code above:
+# Land information is given as different categories. We are going to add the different categories such as land owned, land leased-in etc. discussed in the definition above (which are listed as serial numbers 1 through 4) for each household.
+# First we group the data by household ID, and then we sum the area of land for serial numbers 1 through 4
+# This sum is stored in a new column called land_possessed_acres
+
+
+
+# Convert the land possessed into hectares from acres
+# For convenience use roun() function to round off the converted value to three decimal places
+# Note that 0.404686 hectares = 1 acre
+
+Land_categorization$land_possessed_ha <- round(
+  Land_categorization$land_possessed_acres *  0.404686, 
+  3)
+
+
+# Add a column to categorize the land sizes in the same manner as the report. 
+# The report has the following categories: <0.01, 0.01-0.40, 0.40-0.1.00, 1.01-2.00, 2.01-4.00,4.01-10.00,10+
+# I will use a chain of ifelse() functions to assign these categories.
+
+Land_categorization <- Land_categorization %>% 
+  mutate(size_class_of_land_possessed_ha = ifelse(land_possessed_ha < 0.01, "< 0.01", 
+                                                  ifelse(land_possessed_ha < 0.40, "0.01 - 0.40",
+                                                         ifelse(land_possessed_ha < 1.00, "0.40 - 1.00",
+                                                                ifelse(land_possessed_ha < 2.00, "1.01 - 2.00",
+                                                                       ifelse(land_possessed_ha < 4.00, "2.01 - 4.00",
+                                                                              ifelse(land_possessed_ha < 10.00, "4.01 - 10.00",
+                                                                                     ifelse(land_possessed_ha >=10, "10+", "ERROR"))))))))
+
+
+# On second thoughts, convert this to factor variable
+Land_categorization$size_class_of_land_possessed_ha <- factor(Land_categorization$size_class_of_land_possessed_ha,
+                                                              levels = c("< 0.01", "0.01 - 0.40", "0.40 - 1.00", "1.01 - 2.00", "2.01 - 4.00", "4.01 - 10.00", "10+", "ERROR"))
+
+
+
+
+# Replace NAs with 0 to be sure
+Land_categorization[is.na(Land_categorization)] <- 0
+
+# Now merge this column and the area column to the All_HH_Basic data frame.
+
+All_HH_Basic <- All_HH_Basic %>%
+  left_join(
+    Land_categorization %>%
+      select(HH_ID, land_possessed_ha, size_class_of_land_possessed_ha),
+    by = "HH_ID"
+  )
+
+
+# Replace the NA values in size_class_of_land_possessed_ha column with the factor "<0.01" as these households have no land and therefore did not feature in the L4 data frame, and subsequently did not feature in the Land_categorization data frame.
+levels(All_HH_Basic$size_class_of_land_possessed_ha) <- c(levels(All_HH_Basic$size_class_of_land_possessed_ha), "< 0.01")
+All_HH_Basic$size_class_of_land_possessed_ha[is.na(All_HH_Basic$size_class_of_land_possessed_ha)] <- "< 0.01"
+
+
+# Replace NAs with 0 to be sure
+All_HH_Basic[is.na(All_HH_Basic)] <- 0
+
+
+# Third step is complete
+
+
+
 # Create a subset of Visit 2 households
 
-# Load the data
+# Load data that contains all visit 2 households
 
 # Get level codes first
 Level1Codes <- read_excel("List_Level_Codes.xlsx", sheet = "Level1")
@@ -189,7 +297,7 @@ L1_V2 <- L1_V2 %>%
 
 
 
-# Create dataset for Common Households Basic Information (The households in visit 2 are a subset of visit 1, so there is no point in making a dataset for visit 2 alone.)
+# Create data set for Common Households Basic Information (The households in visit 2 are a subset of visit 1, so there is no point in making a dataset for visit 2 alone.)
 Common_HH_Basic <- subset(All_HH_Basic, All_HH_Basic$HH_ID %in% L1_V2$HH_ID)
 
 # Bring over the weights_V2 from Level1 Visit 2
