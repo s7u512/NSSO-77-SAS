@@ -22,9 +22,7 @@ Please remember that archive.org can be used to access the website links if need
 
 ### 2.1 Data Extraction
 
-In this exercise, I use the information given in the documentation to calculate the monthly income of agricultural households using unit-level data.
-
-The National Statistcal Survey Office (NSSO) provides unit-level raw data in fixed width files along with documentation on how to read them, such as information about the widths of different columns and their respective column names.
+NSSO provides unit-level raw data in fixed width files along with documentation on how to read them, such as information about the widths of different columns and their respective column names.
 
 This survey conatins household level information of a sample of the population of India, from two visits in 2019. All of the scripts here use data from both survey visits. 
 NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks.
