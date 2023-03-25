@@ -28,7 +28,7 @@ This survey conatins household level information of a sample of the population o
 NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks.
 
 Using the provided documentation, the unit-level data is read into data frames, which can be manipulated, exported, and merged. 
-(To do this, I have prepared some lists based on the documentation to be used in the calculations. These files are uploaded here along with the scripts. Nonetheless it is recommended that a beginner learns to prepare such files themselves by going through the documentation.)
+(To do this, I have prepared some lists for use in calculations, based on the documentation. These files are uploaded here along with the scripts. Nonetheless it is recommended that a beginner learns to prepare such files themselves by going through the documentation.)
 
 ### 2.2 Estimation
 
