@@ -62,8 +62,7 @@ wtd.mean(AH_Household_Income$Household_Income_Monthly, weights = AH_Household_In
 # We get 10218.18 which matches with the report that gave Rs. 10,218 BABYYYYY!!!!!!
 
 # Finally let us make a shorter version of this data frame with just the essential columns for brevity
-AH_Household_Income_Essentials <- AH_Household_Income[,c("HH_ID","Weights_V2","State","Household.size","Religion.code","Social.group.code","Household.classification..code","dwelling.unit.code","type.of.structure","MonthlyTotalCropIncome","MonthlyAnimalIncome","MonthlyNBI", "MonthlyWages", "MonthlyLease_Rent", "MonthlyPensions", "Household_Income_Monthly")]
-
+AH_Household_Income_Essentials <- AH_Household_Income[,c("HH_ID","Weights_V2","State","Household.size","Religion.code","Social.group.code","Household.classification..code","land_possessed_ha","size_class_of_land_possessed_ha","MonthlyTotalCropIncome","MonthlyAnimalIncome","MonthlyNBI", "MonthlyWages", "MonthlyLease_Rent", "MonthlyPensions", "Household_Income_Monthly")]
 
 
 # That's all folks
