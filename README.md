@@ -22,7 +22,7 @@ Please remember that archive.org can be used to access the website links if need
 
 ### 2.1 Data Extraction
 
-In this workbook, I use the information given in the documentation to calculate the monthly income of agricultural households using unit-level data.
+In this exercise, I use the information given in the documentation to calculate the monthly income of agricultural households using unit-level data.
 
 The National Statistcal Survey Office (NSSO) provides unit-level raw data in fixed width files along with documentation on how to read them, such as information about the widths of different columns and their respective column names.
 
