@@ -210,6 +210,7 @@ Land_categorization$land_possessed_ha <- round(
   3)
 
 
+
 # Add a column to categorize the land sizes in the same manner as the report. 
 # The report has the following categories: <0.01, 0.01-0.40, 0.40-0.1.00, 1.01-2.00, 2.01-4.00,4.01-10.00,10+
 # Page 23 (51/4264) of the report defines the categories in detail.
