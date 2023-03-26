@@ -66,16 +66,16 @@ wtd.mean(AH_Household_Income$Household_Income_Monthly, weights = AH_Household_In
 AH_Household_Income_Essentials <- AH_Household_Income[,c("HH_ID","Weights_V2","State","Household.size","Religion.code","Social.group.code","Household.classification..code","land_possessed_ha_V1","size_class_of_land_possessed_ha_V1","MonthlyTotalCropIncome","MonthlyAnimalIncome","MonthlyNBI", "MonthlyWages", "MonthlyLease_Rent", "MonthlyPensions", "Household_Income_Monthly")]
 
 
-#### Optional Extra #####
-# Optionally let us bring in the land size classification from Visit 2
-# First let us load the file with that information, which we prepared in an optional script earlier
-load("Output/AH_Common_HH_Basic_with_Land_V2.Rdata")
-
-# Create a new data frame with the essentials data frame and the two columns from the new data frame
-AH_Household_Income_Essentials2 <- left_join(AH_Household_Income_Essentials, AH_Common_HH_Basic_with_Land_V2 %>%
-                                               select(HH_ID, land_possessed_ha_V2, size_class_of_land_possessed_ha_V2),
-                                             by = "HH_ID")
-#### End of Optional Extra ####
+# #### Optional Extra #####
+# # Optionally let us bring in the land size classification from Visit 2
+# # First let us load the file with that information, which we prepared in an optional script earlier
+# load("Output/AH_Common_HH_Basic_with_Land_V2.Rdata")
+#
+# # Create a new data frame with the essentials data frame and the two columns from the new data frame
+# AH_Household_Income_Essentials2 <- left_join(AH_Household_Income_Essentials, AH_Common_HH_Basic_with_Land_V2 %>%
+#                                               select(HH_ID, land_possessed_ha_V2, size_class_of_land_possessed_ha_V2),
+#                                             by = "HH_ID")
+# #### End of Optional Extra ####
 
 
 
