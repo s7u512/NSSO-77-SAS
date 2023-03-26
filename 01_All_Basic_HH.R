@@ -26,7 +26,7 @@ library(dplyr)          #  tidyverse package for data manipulation
 
 
 # Set working directory
-setwd("D:/Play/Statistics/SAS/2023/WorkFiles3") 
+setwd("path/to/working/directory") 
 
 # The initial target is to create a data frame with data from level 3 of visit 1 as it contains some basic information regarding each household.
 
