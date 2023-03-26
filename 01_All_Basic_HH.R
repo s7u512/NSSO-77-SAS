@@ -212,16 +212,18 @@ Land_categorization$land_possessed_ha <- round(
 
 # Add a column to categorize the land sizes in the same manner as the report. 
 # The report has the following categories: <0.01, 0.01-0.40, 0.40-0.1.00, 1.01-2.00, 2.01-4.00,4.01-10.00,10+
+# Page 23 (51/4264) of the report defines the categories in detail.
 # I will use a chain of ifelse() functions to assign these categories.
 
 Land_categorization <- Land_categorization %>% 
-  mutate(size_class_of_land_possessed_ha = ifelse(land_possessed_ha < 0.01, "< 0.01", 
-                                                  ifelse(land_possessed_ha < 0.40, "0.01 - 0.40",
-                                                         ifelse(land_possessed_ha < 1.00, "0.40 - 1.00",
-                                                                ifelse(land_possessed_ha < 2.00, "1.01 - 2.00",
-                                                                       ifelse(land_possessed_ha < 4.00, "2.01 - 4.00",
-                                                                              ifelse(land_possessed_ha < 10.00, "4.01 - 10.00",
-                                                                                     ifelse(land_possessed_ha >=10, "10+", "ERROR"))))))))
+  mutate(size_class_of_land_possessed_ha = ifelse(land_possessed_ha < 0.004, "< 0.01", 
+                                                  ifelse(land_possessed_ha < 0.404, "0.01 - 0.40",
+                                                         ifelse(land_possessed_ha < 1.004, "0.40 - 1.00",
+                                                                ifelse(land_possessed_ha < 2.004, "1.01 - 2.00",
+                                                                       ifelse(land_possessed_ha < 4.004, "2.01 - 4.00",
+                                                                              ifelse(land_possessed_ha < 10.004, "4.01 - 10.00",
+                                                                                     ifelse(land_possessed_ha >=10.004, "10+", "ERROR"))))))))
+
 
 
 # On second thoughts, convert this to factor variable
