@@ -26,7 +26,7 @@ library(dplyr)          #  tidyverse package for data manipulation
 
 
 # Set working directory
-setwd("path/to/working/directory") 
+setwd("D:/Play/Statistics/SAS/2023/WorkFiles3") 
 
 # The initial target is to create a data frame with data from level 3 of visit 1 as it contains some basic information regarding each household.
 
@@ -188,50 +188,56 @@ L4_V1$Weights_V1 <- round(L4_V1$Weights_V1, digits =1)
 
 # DEFINITION: Out of various categories of land reported against a rural household, land which are ‘owned and possessed’, ‘leased-in’ and ‘otherwise possessed’ are combined and termed as ‘land possessed’ by the household. (3.1.2.1 on Page 46 (76/4264))
 
+# This means that we have to add area in serial no.s 1, 2, 3, 4, 6, 7, and 8 for each hh_id
+
 # Create a new data frame with just the land information. 
 Land_categorization <- L4_V1 %>%
   group_by(HH_ID) %>%
   summarise(
-    land_possessed_acres = sum(area.of.land..0.00.acre.[Srl.No. %in% c(1,2,3,4)], na.rm = TRUE)
+    land_possessed_acres = sum(area.of.land..0.00.acre.[Srl.No. %in% c(1,2,3,4,6,7,8,9)], na.rm = TRUE)
   )
 
 # Explanation for the code above:
-# Land information is given as different categories. We are going to add the different categories such as land owned, land leased-in etc. discussed in the definition above (which are listed as serial numbers 1 through 4) for each household.
-# First we group the data by household ID, and then we sum the area of land for serial numbers 1 through 4
+# Land information is given as different categories. We are going to add the different categories such as land owned, land leased-in etc. discussed in the definition above (which are listed as serial numbers 1 through 9 except for 5 which is land leased out) for each household.
+# First we group the data by household ID, and then we sum the area of land for serial numbers 1 through 9 except for 5.
 # This sum is stored in a new column called land_possessed_acres
 
 
 
 # Convert the land possessed into hectares from acres
 # For convenience use roun() function to round off the converted value to three decimal places
-# Note that 0.404686 hectares = 1 acre
+# Note that the report mentions in Page 23 (51/4264) that the conversion factor used from acres to hectares is 0.405
 
 Land_categorization$land_possessed_ha <- round(
-  Land_categorization$land_possessed_acres *  0.404686, 
+  Land_categorization$land_possessed_acres *  0.405, 
   3)
-
 
 
 # Add a column to categorize the land sizes in the same manner as the report. 
 # The report has the following categories: <0.01, 0.01-0.40, 0.40-0.1.00, 1.01-2.00, 2.01-4.00,4.01-10.00,10+
 # Page 23 (51/4264) of the report defines the categories in detail.
-# I will use a chain of ifelse() functions to assign these categories.
 
+
+# Define the new size classes
+size_classes_list <- c(-0.001, 0.004, 0.404, 1.004, 2.004, 4.004, 10.004, Inf)                                            # We get these values from the table in Page 23 of the report
+size_class_labels_list <- c("< 0.01", "0.01 - 0.40", "0.41 - 1.00", "1.01 - 2.00", "2.01 - 4.00", "4.01 - 10.00", "10+")  # We get these values from the table in Page 23 of the report
+
+# Use the cut() function to categorize the land sizes
 Land_categorization <- Land_categorization %>% 
-  mutate(size_class_of_land_possessed_ha = ifelse(land_possessed_ha < 0.004, "< 0.01", 
-                                                  ifelse(land_possessed_ha < 0.404, "0.01 - 0.40",
-                                                         ifelse(land_possessed_ha < 1.004, "0.40 - 1.00",
-                                                                ifelse(land_possessed_ha < 2.004, "1.01 - 2.00",
-                                                                       ifelse(land_possessed_ha < 4.004, "2.01 - 4.00",
-                                                                              ifelse(land_possessed_ha < 10.004, "4.01 - 10.00",
-                                                                                     ifelse(land_possessed_ha >=10.004, "10+", "ERROR"))))))))
+                          mutate(
+                                  size_class_of_land_possessed_ha = cut(
+                                                                        land_possessed_ha, 
+                                                                        breaks = size_classes_list, 
+                                                                        labels = size_class_labels_list,
+                                                                        right = TRUE
+                                                                        ))
 
-
-
-# On second thoughts, convert this to factor variable
-Land_categorization$size_class_of_land_possessed_ha <- factor(Land_categorization$size_class_of_land_possessed_ha,
-                                                              levels = c("< 0.01", "0.01 - 0.40", "0.40 - 1.00", "1.01 - 2.00", "2.01 - 4.00", "4.01 - 10.00", "10+", "ERROR"))
-
+# Explanation for the code above:
+# First we create a new column in the data frame using mutate() function, calling it size_class_of_land_possessed_ha
+# Now we use the cut() function. The cut() function in R is used to divide a continuous variable into discrete intervals, or "bins." It takes a number as input and returns a factor object with labels for each bin.
+# Here we break the column land_possessed_ha into intervals defined in size_classes_list, and then apply labels given in size_class_labels_list.
+# Next we specify that the breaks need to happen by keeping the right end of the interval closed, by specifying right = TRUE
+# We are done
 
 
 
@@ -294,7 +300,7 @@ L1_V2 <- L1_V2 %>%
 L1_V2$Weights_V2 <- round(L1_V2$Weights_V2, digits =1)
 
 # Create a common ID for all households as per documentation.
-# This can be done by creating a new column combining three specific columns seperated by a zero
+# This can be done by creating a new column combining three specific columns separated by a zero
 L1_V2 <- L1_V2 %>%
   mutate(HH_ID = paste(FSU.Serial.No.,Second.stage.stratum.no.,Sample.hhld..No.,sep = "0"))
 
