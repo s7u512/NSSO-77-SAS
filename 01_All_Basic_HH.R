@@ -21,6 +21,7 @@ rm(list = ls())         # clear the environment
 #  Load packages
 library(readxl)         #  for reading excel files
 library(readr)          #  for reading fixed width files in a fast and consistent manner compared to the 'foreign' library
+library(data.table)     #  for exporting data in a fast manner
 library(dplyr)          #  tidyverse package for data manipulation
 
 
