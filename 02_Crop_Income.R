@@ -22,6 +22,7 @@ library(readr)          #  for reading fixed width files in a fast and consisten
 library(dplyr)          #  tidyverse package for data manipulation
 library(tidyr)          #  tidyverse package for data cleaning
 library(Hmisc)          #  for for weighted mean, etc.
+library(data.table)     #  for exporting data in a fast manner
 
 # Set working directory
 setwd("path/to/working/directory") 
