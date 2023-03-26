@@ -3,9 +3,9 @@
 I have managed to match the land size classification with the report but only to some extent.
 
 To be more specific, I have been able to match the Statement 1.3 in the report (page 46-47) with my data.
-However, I am unable to match with the Table 23A in the report (page A-1018) with my data.
+However, I am unable to match the Table 23A in the report (page A-1018) with my data.
 
-Here is a table that shows some difference. Any help is appreciated.
+Here is a table that shows the difference in monthly household incomes. Any help is appreciated.
 
 | Land Size Class | HH Income I get | HH Income in report | Difference | Difference % |
 | --- | --- | --- | --- | --- |
