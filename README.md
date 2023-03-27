@@ -4,7 +4,7 @@ These R scripts were developed as a personal project to learn sample survey esti
 
 The scripts are simple and heavily commented to be useful to beginners. Read the [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
 
-These scripts are designed to estimate the results of the Situation Assessment Survey of Agricultural Households conducted by NSSO in 2019 - also known as NSS 77 th Round for Schedule- 33.1, January 2019 – December 2019,(Land and Livestock Holding of Households and Situation Assessment of Agricultural Households). Unit-level data along with a report was published by the National Statistical Office in September 2019.
+These scripts are designed to estimate the results of the Situation Assessment Survey of Agricultural Households conducted by NSSO in 2019 - also known as `NSS 77 th Round for Schedule- 33.1, January 2019 – December 2019,(Land and Livestock Holding of Households and Situation Assessment of Agricultural Households)`. Unit-level data along with a report was published by the National Statistical Office in September 2019.
 
 The scripts are specifically tailored to work with the published unit-level data from this survey.
 
