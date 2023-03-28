@@ -32,13 +32,13 @@ Using the provided documentation, the unit-level data is read into data frames, 
 
 ### 2.2 Extraction
 
-Currently the unit level data is provided in the proprietary nesstar format, along with a Nesstar Explorer executable installer. I will elaborate on how to get data out of this soon. 
+Currently the unit level data is provided in the proprietary nesstar format, along with a Nesstar Explorer executable installer. I will elaborate on how to get data out of this in the future. 
 
-Nesstar is a software platform developed by the Norwegian Social Science Data Services (NSD) for publishing, sharing, and analyzing social science data. However, the .nesstar format is proprietary and you need their tools to extract the data. It is possible to extract the data into various formats including fixed width text through software provided. 
+Nesstar is a software platform developed by the Norwegian Social Science Data Services (NSD) for publishing, sharing, and analyzing social science data. However, the .nesstar format is proprietary and you need their tools to extract the data. It is possible to extract the data into various formats including fixed width text through software provided along with the data from MoSPI's microdata catalogue, at least in Windows systems. 
 
 The unit level data used to be available in fixed width text files that can be easily read. 
 
-In this exercise, we are using unit level data in fixed width files. (Documentation on how to read them, such as information about the widths of different columns and their respective column names, and other details such as application of weights was available in the old documentation. I am currently verifying if they are available in the new formats. Will update once done.)
+In this exercise, we are using unit level data in fixed width files. (Documentation on how to read them, such as information about the widths of different columns and their respective column names, and other details such as application of weights was available in the old documentation. I am verifying if they are available in the new formats. Will update once done.)
 
 
 ### 2.3. Estimation
