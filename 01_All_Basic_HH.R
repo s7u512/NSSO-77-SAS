@@ -26,7 +26,7 @@ library(dplyr)          #  tidyverse package for data manipulation
 
 
 # Set working directory
-setwd("path/to/working/directory") 
+setwd("/home/fasuser/Sync/Other/RStudio/NSSO-77-SAS/") # change this path to your specific directory before running the script 
 
 # The initial target is to create a data frame with data from level 3 of visit 1 as it contains some basic information regarding each household.
 
