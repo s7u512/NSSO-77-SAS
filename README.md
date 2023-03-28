@@ -36,7 +36,7 @@ Currently the unit level data is provided in the proprietary `.nesstar` format, 
 
 The unit level data used to be available in fixed width text files that can be easily read.
 
-In this exercise, we are using unit level data in fixed width files. (Documentation on how to read them, such as information about the widths of different columns and their respective column names, and other details such as application of weights was available in the old documentation. I am verifying if they are available in the new formats. Will update once done.)
+In this exercise, we are using unit level data in fixed width files. (Documentation on how to read them, such as information about the widths of different columns and their respective column names, and other details such as application of weights was available in the old documentation.)
 
 ### 2.3. Estimation
 
