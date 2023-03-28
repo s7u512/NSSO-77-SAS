@@ -1,6 +1,6 @@
 # Instructions
 
-Read this document first to get started. This applies for fixed-width data procured using the old method. I have made [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) on how to use the new format and modify the scripts here to work with the new format. But read this first before going there, as that document assumes that you did.
+Read this document first to get started. This applies for fixed-width data procured using the old method. I have made [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) on how to use the data in the new format(s) and modify the scripts here to work with that. But read this first before going there, as that document assumes that you did.
 
 ## 1. Requirements
 
