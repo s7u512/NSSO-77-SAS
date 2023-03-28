@@ -66,17 +66,23 @@ The variable name is essentially the block number and question number put togeth
 
 The drawback here is that `NA` values appear as blanks, and variable types are not always what you want them to be.
 
+
 ## Modifying the scripts in this repository
 
+
 If you are cloning this repo and making changes, make it a fork, make the changes, and upload that if possible. Everyone would benefit.
+
 
 Basically what needs to be done are a couple of things.
 
 1.  In each script, change the few lines pertaining to reading in the raw data in each script (akin to the sample codes provided above).
 
+
 2.  I am assuming some changes in variable types are required if you are using `.dat` or `.sav` formats. (For example, Religion Code is a character variable instead of a numeric with range 0-9. Maybe this is fine, maybe there are cases where this is not fine. Let me know if you do this.
 
+
 3.  The big headache is replacing all the variable names used in the scripts with the variable names that the data frames from the new format uses.
+
 
 4.  Some decision will have to be taken about the mutated variables and labels too. This can be done. Some example code below:
 
@@ -96,7 +102,9 @@ Basically what needs to be done are a couple of things.
     df
     ```
 
+
 5.  Another issue common to any format emanating from the `.nesstar` file is that of Household ID. The `.nesstar` data has a pre-made Household ID column (while my script constructs one each time because the fixed width files did not come with it). Note that even though both Household IDs are following the documentation they are not the same. The Household IDs in these scripts have extra separator 0s in them. On the whole it might be a better idea to remove the code that creates household IDs. Keep an eye on column numbering though, as the pre-existence of the Household IDs may mean sometimes a column number 11 becomes column number 12.
+
 
 I think that is about all. Should be a day's work at most, going through the scripts and making these changes.
 
