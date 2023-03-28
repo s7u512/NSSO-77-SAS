@@ -72,7 +72,7 @@ There are two ways of going about running these scripts I will describe here. Th
 ### 4.2 Without cloning the git
 
 0.  Decide on the working directory. In this example I will use `/home/user/Desktop/SAS2019` (Note: If you are in a Windows machine, you will need to reverse the slashes from, for example, `D:\Statistics\SAS2019` to `D:/Statistics/SAS2019`)
-1.  Bring all the scripts and the lists in this repository and place them on the working directory (You can just right-click and save the links from [here](https://github.com/s7u512/NSSO-77-SAS)) 
+1.  Bring all the scripts and the lists in this repository and place them on the working directory (You can just right-click and save the links from [the main page of this repository](https://github.com/s7u512/NSSO-77-SAS)) 
 2.  Create the folders `/home/user/Desktop/SAS2019/Raw Data/` and `/home/user/Desktop/SAS2019/Output`
 3.  Bring all the fixed width files of raw data and place them in `/home/user/Desktop/SAS2019/Raw Data/`
 4.  Open the first script using an IDE such as [RStudio](https://posit.co/products/open-source/rstudio/).
