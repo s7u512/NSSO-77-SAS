@@ -66,8 +66,8 @@ There are two ways of going about running these scripts I will describe here. Th
 3.  Place all the fixed width files of raw data in the `Raw Data` folder.
 4.  Open the scripts in the IDE of your choice such as [RStudio](https://github.com/rstudio/rstudio)
 5.  Read through the scripts.
-6.  Install relevant libraries if required.
-7.  Run them in the order of naming.
+6.  Install relevant libraries if required. (This can be done by running the code `install.packages("packagename")` in the R Console)
+8.  Run them in the order of naming.
 
 ### 4.2 Without cloning the git
 
@@ -77,7 +77,7 @@ There are two ways of going about running these scripts I will describe here. Th
 3.  Bring all the fixed width files of raw data and place them in `/home/user/Desktop/SAS2019/Raw Data/`
 4.  Open the first script using an IDE such as [RStudio](https://posit.co/products/open-source/rstudio/).
 5.  Read through the script.
-6.  Install relevant libraries if required.
+6.  Install relevant libraries if required. (This can be done by running the code `install.packages("packagename")` in the R Console)
 7.  Change the line `setwd(".")` to the path to your working directory.
 8.  Run the script.
 9.  Repeat the steps 4 to 8 for all the scripts in order.
