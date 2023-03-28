@@ -26,7 +26,7 @@ library(Hmisc)          #  for for weighted mean, etc.
 library(data.table)     #  for exporting data in a fast manner
 
 # Set working directory
-setwd("path/to/working/directory") 
+setwd("/home/fasuser/Sync/Other/RStudio/NSSO-77-SAS/") # change this path to your specific directory before running the script 
 
 # Load relevant data prepared earlier
 load("Output/All_HH_Basic.Rdata")
