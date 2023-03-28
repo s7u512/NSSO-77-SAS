@@ -14,24 +14,34 @@ The scripts are specifically tailored to work with the published unit-level data
 1. [Situation Assessment Survey of Agricultural Households 2019: A Statistical Note by Aparajita Bakshi](http://ras.org.in/situation_assessment_survey_of_agricultural_households_2019_a_statistical_note)
 2. [The Situation Assessment Surveys: An Evaluation by Biplab Sarkar](http://ras.org.in/index.php?Article=the_situation_assessment_surveys&q=biplab&keys=biplab)
 
+## 2. Data
+
+### 2.1 Availability
+
 The unit-level data and documentation associated with this can be found [here](http://microdata.gov.in/nada43/index.php/catalog/157)
 
-The full list of unit-level datasets and documentation associated with this used to be found [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT) or [here](https://mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock). One way to obtain the files is through archive.org. 
+Currently one needs to create an account with MoSPI in order to get access to this data. This process, at the moment, seems unreliable. Please let me know if there is a better and more reliable way to obtain the data.
 
+The full list of unit-level datasets and documentation associated with this used to be publicly available [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT) or [here](https://mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock). One way to obtain the files is through archive.org. 
 
-## 2. Approach
-
-### 2.1 Data Extraction
-
-NSSO provides unit-level raw data in fixed width files along with documentation on how to read them, such as information about the widths of different columns and their respective column names.
-
-This survey conatins household level information of a sample of the population of India, from two visits in 2019. All of the scripts here use data from both survey visits. 
+This survey contains household level information of a sample of the population of India, from two visits in 2019. All of the scripts here use data from both survey visits. 
 NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks.
 
 Using the provided documentation, the unit-level data is read into data frames, which can be manipulated, exported, and merged. 
 (To do this, I have prepared some lists for use in calculations, based on the documentation. These files are uploaded here along with the scripts. Nonetheless it is recommended that a beginner learns to prepare such files themselves by going through the documentation.)
 
-### 2.2 Estimation
+### 2.2 Extraction
+
+Currently the unit level data is provided in the proprietary nesstar format, along with a Nesstar Explorer executable installer. I will elaborate on how to get data out of this soon. 
+
+Nesstar is a software platform developed by the Norwegian Social Science Data Services (NSD) for publishing, sharing, and analyzing social science data. However, the .nesstar format is proprietary and you need their tools to extract the data. It is possible to extract the data into various formats including fixed width text through software provided. 
+
+The unit level data used to be available in fixed width text files that can be easily read. 
+
+In this exercise, we are using unit level data in fixed width files. (Documentation on how to read them, such as information about the widths of different columns and their respective column names, and other details such as application of weights was available in the old documentation. I am currently verifying if they are available in the new formats. Will update once done.)
+
+
+### 2.3. Estimation
 
 The goal here is to estimate the population's characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
 
