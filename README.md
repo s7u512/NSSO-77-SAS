@@ -1,6 +1,6 @@
 # Estimation Scripts for SAS 2019 (NSSO 77)
 
-These R scripts were developed as a personal project to learn sample survey estimation using R. The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work. However, I have ended up deviating  enough to not be able to call it a fork anymore, and therefore decided to create my own repository. 
+These R scripts were developed as a personal project to learn sample survey estimation using [R](https://www.r-project.org/about.html) and [RStudio](https://github.com/rstudio/rstudio). The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work. However, I have ended up deviating  enough to not be able to call it a fork anymore, and therefore decided to create my own repository. 
 
 The scripts are simple and heavily commented to be useful to beginners. Read the [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
 
@@ -43,7 +43,7 @@ In this exercise, we are using unit level data in fixed width files. (Documentat
 
 ### 2.3. Estimation
 
-The goal here is to estimate the population's characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
+The goal here is to estimate the population and its characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
 
 The calculations in these scripts are performed after applying sample weights provided by the NSSO. 
 
@@ -62,11 +62,11 @@ There are a few supporting files prepared based on the documentation, for use in
 
 ## 4. Disclaimer
 
-I am a beginner in both R and sample survey estimation. I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please let me know if you spot any issues or have suggestions for improvement. I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) or [reach out](https://twitter.com/all_awry).
+I am a beginner in both R and sample survey estimation. I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please let me know if you spot any issues or have suggestions for improvement. I have docummented some in [Issues](https://github.com/s7u512/NSSO-77-SAS/blob/main/ISSUES.md) here. I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) or [reach out](https://twitter.com/all_awry) if you find something.
 
 ## 5. Contributing
 
-These scripts were designed for personal use, but if you would like to contribute to this project, feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to allow someone to start from absolute scratch. I would also like to expand this work into a more generalisable guide towards sample survey estimations through R. If anyone is interested [let me know](https://twitter.com/all_awry)/contribute.
+These scripts were designed for personal use, but if you would like to contribute to this project, feel frre to get involved. Do feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to allow someone to start from absolute scratch. I would also like to expand this work into a more generalisable guide towards sample survey estimations through R. If anyone is interested [let me know](https://twitter.com/all_awry)/contribute.
 
 
 ## 6. License
