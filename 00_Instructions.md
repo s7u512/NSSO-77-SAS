@@ -8,7 +8,7 @@ Read this document first to get started.
 
 2. Obtain the Data: Get the raw data and other documentation for this survey. Some links to download this data are provided in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but the process might be different at the time of your vieweing.
 
-NSSO used to provide the unit level data as fixed width text files. The data was split into multiple levels for each visit (There are two visits). It is a good idea to have everything even though in this exercise only Levels 01, 02, 03, 04, 07, 08, 11, and 12 are used owing to the limited scope. NSSO also provided a spreadsheet that contained information about the layout of the fixed width data. This included information such as the variables contained in each level, the widths of different variables and their names, and some other less relevant information.
+NSSO used to provide the unit level data as fixed width text files. The data was split into multiple levels for each visit (There are two visits). It is a good idea to have everything even though in this exercise only Levels 01, 02, 03, 04, 07, 08, 11, 12, and 13 are used owing to the limited scope. NSSO also provided a spreadsheet that contained information about the layout of the fixed width data. This included information such as the variables contained in each level, the widths of different variables and their names, and some other less relevant information.
 
 3. Prepare lists: In the future I will document how to use NSSO's documentation to prepare some lists provided in this repo to help with estimation. For now the lists I have provided can suffice. However, I strognly suggest the beginner to go through NSSO's documentation to prepare these lists themselves.
 
@@ -59,7 +59,7 @@ These are the supporting files prepared based on the documentation, for use in t
 
 ## 4. Running the Scripts
 
-Decide on the working directory. 
+Decide on the working directory. In this example I will use `/home/user/Desktop/SAS2019` 
 
 1. Bring all the six scripts and the six lists and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
 2. Create the folders `/home/user/Desktop/SAS2019/Raw Data/` and `/home/user/Desktop/SAS2019/Output`
@@ -67,7 +67,7 @@ Decide on the working directory.
 4. Open the first script using an IDE such as [RStudio](https://posit.co/products/open-source/rstudio/).
 5. Read through the script.
 6. Install relevant libraries if required.
-7. Change the line ``setwd("/home/fasuser/Sync/Other/RStudio/NSSO-77-SAS/")`` to the path to your working directory. 
+7. Change the line ``setwd(".")`` to the path to your working directory. 
 8. Run the script. 
 9. Repeat the steps 4 to 8 for all the scripts in order.
 
