@@ -52,7 +52,7 @@ Despite the limited scope, the idea is that if a beginner is able to follow thro
 
 ## 3. Contents and Usage
 
-Read [Instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started. The R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. There are a few supporting files prepared based on the documentation, for use in the scripts. I recommend that beginners learn how to create these files on their own. 
+Read [these instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started. The R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. There are a few supporting files prepared based on the documentation, for use in the scripts. I recommend that beginners learn how to create these files on their own. 
 
 Read [these instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) for some help with modifying this script to work with unit-level data in `.nesstar`, `.sav` or `.dta` formats.
 
