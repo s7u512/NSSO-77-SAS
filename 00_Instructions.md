@@ -45,22 +45,22 @@ These are the supporting files prepared based on the documentation, for use in t
 
 | File Name                   | Description                                                                                                                                                            |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| List_Level_Codes.xlsx       | Contains the widths specified by NSS for data extraction, as given in the documentation.                                                                               |
-| List_State.xlsx             | Contains codes for States.                                                                                                                                             |
-| List_Social_Group.xlsx      | Contains codes for social groups.                                                                                                                                      |
-| List_HH_Classification.xlsx | Contains codes for household classification (e.g., self-employed in crop production).                                                                                  |
-| List_Religion.xlsx          | Contains codes for religion.                                                                                                                                           |
-| List_Crop_Code.xlsx         | Contains codes for crops (it has two lists - one for MSP Crops alone, and one for all crops.) This list is not used here, but will be of use to analyse cropwise data. |
+| List_Level_Codes.xlsx       | Contains the widths of variables for data extraction, specified by NSS in the documentation.                                                                               |
+| List_State.xlsx             | Contains a list of States against codes.                                                                                                                                             |
+| List_Social_Group.xlsx      | Contains a list of social groups against codes.                                                                                                                                      |
+| List_HH_Classification.xlsx | Contains a list of  household classifications against codes.                                                                                  |
+| List_Religion.xlsx          | Contains a list of religions against codes.                                                                                                                                           |
+| List_Crop_Code.xlsx         | Contains a list of crops against codes (it has two lists - one for MSP Crops alone, and one for all crops in the survey.) This list is not used here, but will be of use to analyse cropwise data. |
 
 ## 4. Running the Scripts
 
-There are two ways of going about it I will describe here. The first one is easier if you have some basic familiarity with git, and the other is for if you do not want to be learning about git.
+There are two ways of going about running these scripts I will describe here. The first one is easier if you have some basic familiarity with git, and the other is for if you do not want to be learning about git.
 
 ### 4.1 Cloning the git (optional \| easier \| requires basic familiarity with git)
 
 1.  Clone the git repo to your desired location. (You can do this [within RStudio](https://happygitwithr.com/index.html) as well.)
 2.  Create the folders `Raw Data` and `Output` in the location. These folders are already added to .gitignore
-3.  Place all the raw data in the Raw Data folder.
+3.  Place all the fixed width files of raw data in the Raw Data folder.
 4.  Open the scripts in the IDE of your choice such as [RStudio](https://github.com/rstudio/rstudio)
 5.  Install relevant libraries if required.
 6.  Run them in the order of naming.
@@ -69,9 +69,9 @@ There are two ways of going about it I will describe here. The first one is easi
 ### 4.2 Without cloning the git
 
 0.  Decide on the working directory. In this example I will use `/home/user/Desktop/SAS2019` (Note: If you are in a Windows machine, you will need to reverse the slashes from, for example, `D:\Statistics\SAS2019` to `D:/Statistics/SAS2019`)
-1.  Bring all the six scripts and the six lists and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
+1.  Bring all the scripts and the lists in this repository and place them on the working directory (in this case `/home/user/Desktop/SAS2019`)
 2.  Create the folders `/home/user/Desktop/SAS2019/Raw Data/` and `/home/user/Desktop/SAS2019/Output`
-3.  Bring all the raw data and place them in `/home/user/Desktop/SAS2019/Raw Data/`
+3.  Bring all the fixed width files of raw data and place them in `/home/user/Desktop/SAS2019/Raw Data/`
 4.  Open the first script using an IDE such as [RStudio](https://posit.co/products/open-source/rstudio/).
 5.  Read through the script.
 6.  Install relevant libraries if required.
@@ -82,5 +82,7 @@ There are two ways of going about it I will describe here. The first one is easi
 You are done. The outputs will be generated in the Output folder.
 
 You can of course change the folder structure to your liking so long as you make appropriate changes to the scripts as well.
+
+If you have data in other formats, read [these instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) for some help on how to modify these scripts to suit that.
 
 Thanks for reading. Please [reach out](https://twitter.com/all_awry) if the instructions are not clear enough. Feel free to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) if you come across any.
