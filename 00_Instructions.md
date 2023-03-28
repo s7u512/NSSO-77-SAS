@@ -63,7 +63,7 @@ There are two ways of going about running these scripts I will describe here. Th
 
 1.  Clone the git repo to your desired location. (You can do this [within RStudio](https://happygitwithr.com/index.html) as well.)
 2.  Create the folders `Raw Data` and `Output` in the location. These folders are already added to .gitignore
-3.  Place all the fixed width files of raw data in the Raw Data folder.
+3.  Place all the fixed width files of raw data in the `Raw Data` folder.
 4.  Open the scripts in the IDE of your choice such as [RStudio](https://github.com/rstudio/rstudio)
 5.  Read through the scripts.
 6.  Install relevant libraries if required.
