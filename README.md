@@ -20,19 +20,19 @@ The scripts are specifically tailored to work with the unit-level data from this
 
 The unit-level data and documentation associated with this can be found [here](http://microdata.gov.in/nada43/index.php/catalog/157)
 
-Currently one needs to create an account with MoSPI in order to get access to this data. This process, at the moment, seems unreliable. Please let me know if there is a better and more reliable way to obtain the data.
+Currently one needs to create an account with MoSPI in order to get access to this data. This process, at the moment, seems unreliable due to seemingly technical issues. Please let me know if there is a better and more reliable way to obtain the data, or if you think I am missing something about the process.
 
-The full list of unit-level datasets and documentation associated with this used to be publicly available [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT) or [here](https://mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock). One way to obtain the files is through archive.org.
+The full list of unit-level datasets and documentation associated with this used to be publicly available [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT) or [here](https://mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock). One way to obtain some of the files is through archive.org.
 
-This survey contains household level information of a sample of the population of India, from two visits in 2019. All of the scripts here use data from both survey visits. NSSO provides the data for different aspects such as demographic information, cost of cultivation etc. in different blocks.
+This survey contains household level information of a sample of the population of India, from two visits in 2019. All of the scripts here use data from both survey visits. NSSO provided the data for different aspects such as demographic information, cost of cultivation etc. in different blocks.
 
 Using the provided documentation, the unit-level data is read into data frames, which can be manipulated, exported, and merged. (To do this, I have prepared some lists for use in calculations, based on the documentation. These files are uploaded here along with the scripts. Nonetheless it is recommended that a beginner learns to prepare such files themselves by going through the documentation.)
 
 ### 2.2 Extraction
 
-Currently the unit level data is provided in the proprietary nesstar format, along with a Nesstar Explorer executable installer. I will elaborate on how to get data out of this in the future.
+Currently the unit level data is provided in the proprietary `.nesstar` format, along with a Nesstar Explorer executable installer. Read [this](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) on how to proceed using such data.
 
-Nesstar is a software platform developed by the Norwegian Social Science Data Services (NSD) for publishing, sharing, and analyzing social science data. However, the .nesstar format is proprietary and you need their tools to extract the data. It is possible to extract the data into various formats including fixed width text through software provided along with the data from MoSPI's microdata catalogue, at least in Windows systems.
+[Nesstar](https://en.wikipedia.org/wiki/Nesstar) was a software suite developed by the Norwegian Social Science Data Services (NSD) for publishing, sharing, and analyzing social science data. However, the .nesstar format is proprietary and you need their tools to extract the data. It is possible to extract the data into various formats including fixed width text through software provided along with the data from MoSPI's microdata catalogue, at least in Windows systems.
 
 The unit level data used to be available in fixed width text files that can be easily read.
 
@@ -40,27 +40,33 @@ In this exercise, we are using unit level data in fixed width files. (Documentat
 
 ### 2.3. Estimation
 
-The goal here is to estimate the population and its characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
+The goal is to estimate the population and its characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
 
 The calculations in these scripts are performed after applying sample weights provided by the NSSO.
 
-The scope of this exercise concludes at estimating monthly household incomes of agricultural households in India during the agricultural year 2018-19. The idea is to seperately calculate different components of household income (such as income from farming, income from wages, etc.) and then merge them together to calculate the monthly household income of the agricultural households. The income from each component is computed separately using the appropriate weights and other relevant variables. These component datasets are then combined together to obtain the household income. We rely on [the report](https://ruralindiaonline.org/en/library/resource/situation-assessment-of-agricultural-households-and-land-and-livestock-holdings-of-households-in-rural-india/) published along with the unit-level data to verify the estimation.
+The scope of this exercise concludes at estimating monthly household incomes of agricultural households in India during the agricultural year 2018-19 using the paid-out costs approach. The idea is to seperately calculate different components of household income (such as income from farming, income from wages, etc.) and then merge them together to calculate the monthly household income of the agricultural households. The income from each component is computed separately using the appropriate weights and other relevant variables. These component datasets are then combined together to obtain the household income. [The report](https://ruralindiaonline.org/en/library/resource/situation-assessment-of-agricultural-households-and-land-and-livestock-holdings-of-households-in-rural-india/) published along with the unit-level data is relied upon to verify the estimations.
 
-The scripts are heavily commented and should be easy to follow, even for those with limited experience in R. Note that the scripts are specifically tailored to work with the published data from the 2019 round of the survey.
+The scripts are heavily commented and should be easy to follow, even for those with limited experience in R. Note that the scripts are specifically tailored to work with the fixed width files published from the 2019 round of the survey.
 
-Despite the limited scope, the idea is that if a beginner is able to follow through this exercise they would be equipped to carry out further analysis as required.
+Despite the limited scope, the idea is that if a beginner is able to follow through this exercise they would be equipped to carry out further analysis as they require.
 
 ## 3. Contents and Usage
 
-Start by reading [Instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started. The six R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. There are a few supporting files prepared based on the documentation, for use in the scripts. I recommend that beginners learn how to create these files on their own.
+Start by reading [Instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started. The R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. There are a few supporting files prepared based on the documentation, for use in the scripts. I recommend that beginners learn how to create these files on their own. 
+
+Read [these instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) for some help with modifying this script to work with unit-level data in `.nesstar`, `.sav` or `.dta` formats.
 
 ## 4. Disclaimer
 
-I am a beginner in both R and sample survey estimation. I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please let me know if you spot any issues or have suggestions for improvement. I have docummented some in [Issues](https://github.com/s7u512/NSSO-77-SAS/blob/main/ISSUES.md) here. I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) or [reach out](https://twitter.com/all_awry) if you find something.
+I am a beginner in both R and sample survey estimation. 
+
+I have done my best to keep the code uniform and well-commented. However, there may be mistakes and/or better ways to approach the task I set out to do. Please [let me know](https://twitter.com/all_awry) if you spot any issues or have suggestions for improvement. I have documented some of them [here](https://github.com/s7u512/NSSO-77-SAS/blob/main/ISSUES.md). 
+
+I have not done an exhaustive check of formatting consistency or even other potential issues, so please don't hesitate to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) or [reach out](https://twitter.com/all_awry) if you find something.
 
 ## 5. Contributing
 
-These scripts were designed for personal use, but if you would like to contribute to this project, feel frre to get involved. Do feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to allow someone to start from absolute scratch. I would also like to expand this work into a more generalisable guide towards sample survey estimations through R. If anyone is interested [let me know](https://twitter.com/all_awry)/contribute.
+These scripts were designed for personal use, but if you would like to contribute to this project, feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to make it sufficient for someone to start from absolute scratch. I would also like to expand this work into a more generalisable guide towards sample survey estimations through R. If anyone is interested let me know/contribute.
 
 ## 6. License
 
@@ -68,4 +74,4 @@ This work is licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0
 
 ## 7. Acknowledgements
 
-These scripts were inspired by [the work of Deepak Johnson](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I would like to thank Deepak for his initial work and guidance in this project. Thanks are due also to friends and other colleagues from the [Foundation for Agrarian Studies](https://fas.org.in/) for all their help.
+This is a personal project. These scripts were inspired by [the work of Deepak Johnson](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I would like to thank Deepak for his initial work and guidance in this project. Thanks are due also to friends and other colleagues from the [Foundation for Agrarian Studies](https://fas.org.in/) for all their help.
