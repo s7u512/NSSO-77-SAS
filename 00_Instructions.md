@@ -12,7 +12,7 @@ Read this document first to get started. This applies for fixed-width data procu
 
 4.  Prepare lists: In the future I may document how to use NSSO's documentation to prepare some lists provided in this repo to help with estimation. For now the lists I have provided can suffice. However, I strognly suggest the beginner to go through NSSO's documentation to prepare these lists themselves.
 
-## Some Resources for a beginner
+### Some Resources for a beginner
 
 [Here](https://github.com/pawan1198/r-cheatsheets/blob/master/README.md) is a quick and basic introduction to R (although without any license information). [Here](https://github.com/rstudio/cheatsheets) are some cheat sheets from RStudio. [Here](https://resources.github.com/github-and-rstudio/) are some directions on using RStudio and GitHub together if you are into that sort of thing.
 
