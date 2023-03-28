@@ -1,6 +1,6 @@
 # New Format Instructions
 
-Instructions on how to modify the existing code to work with other formats
+Instructions on how to modify the existing code to work with formats other than fixed width files are what follow.
 
 ## Nesstar
 
@@ -50,7 +50,7 @@ These file formats can be read using the functions from the `haven` package. The
 
 Here is some example code:
 
-``` R
+``` r
 library(haven)
 
 L3_V1_SPSS <- read_sav("Visit1  Level - 03 (Block 4) - demographic and other particulars of household members.sav")
@@ -80,7 +80,7 @@ Basically what needs to be done are a couple of things.
 
 4.  Some decision will have to be taken about the mutated variables and labels too. This can be done. Some example code below:
 
-    ``` R
+    ``` r
     library(dplyr)
     library(labelled)
 
@@ -96,10 +96,12 @@ Basically what needs to be done are a couple of things.
     df
     ```
 
-I think that is about all. Should be a day's work at most, going through the code.
+5.  Another issue common to any format emanating from the `.nesstar` file is that of Household ID. The `.nesstar` data has a pre-made Household ID column (while my script constructs one each time because the fixed width files did not come with it). Note that even though both Household IDs are following the documentation they are not the same. The Household IDs in these scripts have extra separator 0s in them. On the whole it might be a better idea to remove the code that creates household IDs. Keep an eye on column numbering though, as the pre-existence of the Household IDs may mean sometimes a column number 11 becomes column number 12.
+
+I think that is about all. Should be a day's work at most, going through the scripts and making these changes.
 
 Once again, if you do this, please let me know and/or fork the repository (I strongly suggest a GPLv3 license). It's just that I have already done all this work, and I only have half a mind to split this repo into two directories called `Old method` and `New method` or something, and upload all the changes here.
 
-Thanks for reading. Consider contributing.
+Thanks for reading. Consider contributing. Please [reach out](https://twitter.com/all_awry) if anything is not clear enough for you. Feel free to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) if you come across any.
 
 ## 
