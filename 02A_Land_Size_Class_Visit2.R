@@ -20,7 +20,7 @@ library(dplyr)          #  tidyverse package for data manipulation
 
 
 # Set working directory
-setwd("/home/fasuser/Sync/Other/RStudio/NSSO-77-SAS/") # change this path to your specific directory before running the script 
+setwd(".") # change this path to your specific directory before running the script if you downloaded all the code instead of cloning the repo.
 
 # Load relevant data prepared earlier
 load("Output/Common_HH_Basic.Rdata")
