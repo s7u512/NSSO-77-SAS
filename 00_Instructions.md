@@ -6,13 +6,14 @@ Read this document first to get started. This applies for data procured using th
 
 1.  Download and Install [R](https://cloud.r-project.org/). Downloading and installing an Integrated Development Environment (IDE) for R such as [RStudio](https://posit.co/products/open-source/rstudio/) is highly recommended.
 
-[Here](https://github.com/pawan1198/r-cheatsheets/blob/master/README.md) is a quick and basic introduction to R (although without any license information). [Here](https://github.com/rstudio/cheatsheets) are some cheat sheets from RStudio. [Here](https://resources.github.com/github-and-rstudio/) are some directions on using RStudio and GitHub together if you are into that sort of thing.
-
 2.  Obtain the Data: Get the raw data and other documentation for this survey. Some links to download this data are provided in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but the process might be different at the time of your viewing. [Reach out](https://twitter.com/all_awry) if you have queries.
+
+3.  Prepare lists: In the future I may document how to use NSSO's documentation to prepare some lists provided in this repo to help with estimation. For now the lists I have provided can suffice. However, I strognly suggest the beginner to go through NSSO's documentation to prepare these lists themselves.
+
+[Here](https://github.com/pawan1198/r-cheatsheets/blob/master/README.md) is a quick and basic introduction to R (although without any license information). [Here](https://github.com/rstudio/cheatsheets) are some cheat sheets from RStudio. [Here](https://resources.github.com/github-and-rstudio/) are some directions on using RStudio and GitHub together if you are into that sort of thing.
 
 NSSO used to provide the unit level data as fixed width text files. The data was split into multiple levels for each visit (There are two visits). It is a good idea to have everything even though in this exercise only Levels 01, 02, 03, 04, 07, 08, 11, 12, and 13 are used owing to the limited scope. NSSO also provided a spreadsheet that contained information about the layout of the fixed width data. This included information such as the variables contained in each level, the widths of different variables and their names, and some other less relevant information.
 
-3.  Prepare lists: In the future I will document how to use NSSO's documentation to prepare some lists provided in this repo to help with estimation. For now the lists I have provided can suffice. However, I strognly suggest the beginner to go through NSSO's documentation to prepare these lists themselves.
 
 ## 2. Folder Structure
 
