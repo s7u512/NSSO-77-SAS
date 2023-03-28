@@ -25,7 +25,7 @@ Decide on a working directory (a folder/directory in which you will do the work)
 
 ### 3.1 Scripts
 
-The six R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO.
+The R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO.
 
 The analysis can be conducted in the following order:
 
