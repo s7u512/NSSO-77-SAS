@@ -4,11 +4,13 @@ Read this document first to get started. This applies for fixed-width data procu
 
 ## 1. Requirements
 
-1.  Download and Install [R](https://cloud.r-project.org/). Downloading and installing an Integrated Development Environment (IDE) for R such as [RStudio](https://posit.co/products/open-source/rstudio/) is highly recommended.
+1.  [Download and Install R](https://cloud.r-project.org/). 
 
-2.  Obtain the Data: Get the unit level raw data along with the documentation for this survey. Some links to download this data are provided in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but the process might be different at the time of your viewing. [Reach out](https://twitter.com/all_awry) if you have queries.
+2.  Downloading and installing an Integrated Development Environment (IDE) for R such as [RStudio](https://posit.co/products/open-source/rstudio/) is highly recommended.
 
-3.  Prepare lists: In the future I may document how to use NSSO's documentation to prepare some lists provided in this repo to help with estimation. For now the lists I have provided can suffice. However, I strognly suggest the beginner to go through NSSO's documentation to prepare these lists themselves.
+3.  Obtain the Data: Get the unit level raw data along with the documentation for this survey. Some links to download this data are provided in the [README file](https://github.com/s7u512/NSSO-77-SAS/blob/main/README.md), but the process might be different at the time of your viewing. [Reach out](https://twitter.com/all_awry) if you have queries.
+
+4.  Prepare lists: In the future I may document how to use NSSO's documentation to prepare some lists provided in this repo to help with estimation. For now the lists I have provided can suffice. However, I strognly suggest the beginner to go through NSSO's documentation to prepare these lists themselves.
 
 ## Some Resources for a beginner
 
