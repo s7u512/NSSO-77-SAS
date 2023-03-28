@@ -191,16 +191,16 @@ L4_V1$Weights_V1 <- round(L4_V1$Weights_V1, digits =1)
 # This means that we have to add area in serial no.s 1, 2, 3, 4, 6, 7, and 8 for each hh_id
 
 # Create a new data frame with just the land information. 
-Land_categorization <- L4_V1 %>%
+land_categorization_V1 <- L4_V1 %>%
   group_by(HH_ID) %>%
   summarise(
-    land_possessed_acres = sum(area.of.land..0.00.acre.[Srl.No. %in% c(1,2,3,4,6,7,8,9)], na.rm = TRUE)
+    land_possessed_acres_V1 = sum(area.of.land..0.00.acre.[Srl.No. %in% c(1,2,3,4,6,7,8,9)], na.rm = TRUE)
   )
 
 # Explanation for the code above:
 # Land information is given as different categories. We are going to add the different categories such as land owned, land leased-in etc. discussed in the definition above (which are listed as serial numbers 1 through 9 except for 5 which is land leased out) for each household.
 # First we group the data by household ID, and then we sum the area of land for serial numbers 1 through 9 except for 5.
-# This sum is stored in a new column called land_possessed_acres
+# This sum is stored in a new column called land_possessed_acres_V1
 
 
 
@@ -208,8 +208,8 @@ Land_categorization <- L4_V1 %>%
 # For convenience use roun() function to round off the converted value to three decimal places
 # Note that the report mentions in Page 23 (51/4264) that the conversion factor used from acres to hectares is 0.405
 
-Land_categorization$land_possessed_ha <- round(
-  Land_categorization$land_possessed_acres *  0.405, 
+land_categorization_V1$land_possessed_ha_V1 <- round(
+  land_categorization_V1$land_possessed_acres_V1 *  0.405, 
   3)
 
 
@@ -223,40 +223,40 @@ size_classes_list <- c(-0.001, 0.004, 0.404, 1.004, 2.004, 4.004, 10.004, Inf)  
 size_class_labels_list <- c("< 0.01", "0.01 - 0.40", "0.41 - 1.00", "1.01 - 2.00", "2.01 - 4.00", "4.01 - 10.00", "10+")  # We get these values from the table in Page 23 of the report
 
 # Use the cut() function to categorize the land sizes
-Land_categorization <- Land_categorization %>% 
+land_categorization_V1 <- land_categorization_V1 %>% 
                           mutate(
-                                  size_class_of_land_possessed_ha = cut(
-                                                                        land_possessed_ha, 
+                                  size_class_of_land_possessed_ha_V1 = cut(
+                                                                        land_possessed_ha_V1, 
                                                                         breaks = size_classes_list, 
                                                                         labels = size_class_labels_list,
                                                                         right = TRUE
                                                                         ))
 
 # Explanation for the code above:
-# First we create a new column in the data frame using mutate() function, calling it size_class_of_land_possessed_ha
+# First we create a new column in the data frame using mutate() function, calling it size_class_of_land_possessed_ha_V1
 # Now we use the cut() function. The cut() function in R is used to divide a continuous variable into discrete intervals, or "bins." It takes a number as input and returns a factor object with labels for each bin.
-# Here we break the column land_possessed_ha into intervals defined in size_classes_list, and then apply labels given in size_class_labels_list.
+# Here we break the column land_possessed_ha_V1 into intervals defined in size_classes_list, and then apply labels given in size_class_labels_list.
 # Next we specify that the breaks need to happen by keeping the right end of the interval closed, by specifying right = TRUE
 # We are done
 
 
 
 # Replace NAs with 0 to be sure
-Land_categorization[is.na(Land_categorization)] <- 0
+land_categorization_V1[is.na(land_categorization_V1)] <- 0
 
 # Now merge this column and the area column to the All_HH_Basic data frame.
 
 All_HH_Basic <- All_HH_Basic %>%
   left_join(
-    Land_categorization %>%
-      select(HH_ID, land_possessed_ha, size_class_of_land_possessed_ha),
+    land_categorization_V1 %>%
+      select(HH_ID, land_possessed_ha_V1, size_class_of_land_possessed_ha_V1),
     by = "HH_ID"
   )
 
 
-# Replace the NA values in size_class_of_land_possessed_ha column with the factor "<0.01" as these households have no land and therefore did not feature in the L4 data frame, and subsequently did not feature in the Land_categorization data frame.
-levels(All_HH_Basic$size_class_of_land_possessed_ha) <- c(levels(All_HH_Basic$size_class_of_land_possessed_ha), "< 0.01")
-All_HH_Basic$size_class_of_land_possessed_ha[is.na(All_HH_Basic$size_class_of_land_possessed_ha)] <- "< 0.01"
+# Replace the NA values in size_class_of_land_possessed_ha_V1 column with the factor "<0.01" as these households have no land and therefore did not feature in the L4 data frame, and subsequently did not feature in the land_categorization_V1 data frame.
+levels(All_HH_Basic$size_class_of_land_possessed_ha_V1) <- c(levels(All_HH_Basic$size_class_of_land_possessed_ha_V1), "< 0.01")
+All_HH_Basic$size_class_of_land_possessed_ha_V1[is.na(All_HH_Basic$size_class_of_land_possessed_ha_V1)] <- "< 0.01"
 
 
 # Replace NAs with 0 to be sure
