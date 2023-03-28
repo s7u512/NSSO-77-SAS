@@ -66,7 +66,7 @@ I have not done an exhaustive check of formatting consistency or even other pote
 
 ## 5. Contributing
 
-These scripts were designed for personal use, but if you would like to contribute to this project, feel free to fork the repository and make any modifications you see fit. I would like to expand the documentation to make it sufficient for someone to start from absolute scratch. I would also like to expand this work into a more generalisable guide towards sample survey estimations through R. If anyone is interested let me know/contribute.
+These scripts were designed for personal use, but if you would like to contribute to this project, feel free to submit a pull request with changes, or fork the repository and make any modifications you see fit. I would like to expand the documentation to make it sufficient for someone to start from absolute scratch. I would also like to expand this work into a more generalisable guide towards sample survey estimations through R. If you are interested let me know/contribute.
 
 ## 6. License
 
