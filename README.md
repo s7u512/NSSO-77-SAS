@@ -30,9 +30,7 @@ Using the provided documentation, the unit-level data is read into data frames, 
 
 ### 2.2 Extraction
 
-Currently the unit level data is provided in the proprietary `.nesstar` format, along with a Nesstar Explorer executable installer. Read [this](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) on how to proceed using such data.
-
-[Nesstar](https://en.wikipedia.org/wiki/Nesstar) was a software suite developed by the Norwegian Social Science Data Services (NSD) for publishing, sharing, and analyzing social science data. However, the .nesstar format is proprietary and you need their tools to extract the data. It is possible to extract the data into various formats including fixed width text through software provided along with the data from MoSPI's microdata catalogue, at least in Windows systems.
+Currently the unit level data is provided in the proprietary `.nesstar` format, along with a Nesstar Explorer executable installer. Read [this](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) on how to proceed using such data or formats such a `.sav` or `.dta`. 
 
 The unit level data used to be available in fixed width text files that can be easily read.
 
