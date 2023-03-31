@@ -4,7 +4,7 @@ Instructions on how to modify the existing code to work with formats other than 
 
 ## Nesstar
 
-[Nesstar](https://en.wikipedia.org/wiki/Nesstar "wikipedia link") was a software system for data management maintained by the [Norwegian Social Science Data Services](https://en.wikipedia.org/wiki/Norwegian_Centre_for_Research_Data "Norwegian Centre for Research Data") (also known as **NSD**). Currently the [micro-data catalogue](http://microdata.gov.in/nada43/index.php/catalog/central/about) provides the raw data as a compressed set of three files - the Nesstar Explorer installer for Windows, a PDF file with instructions on how to get data from the website, and a `.nesstar` file.
+[Nesstar](https://en.wikipedia.org/wiki/Nesstar "wikipedia link") was a software system for data management maintained by the [Norwegian Social Science Data Services](https://en.wikipedia.org/wiki/Norwegian_Centre_for_Research_Data "Norwegian Centre for Research Data") (also known as **NSD**). Currently the [micro-data catalogue](http://microdata.gov.in/nada43/index.php/catalog/central/about) provides the raw data as a compressed set of three files - the Nesstar Explorer installer for Windows, a PDF file with instructions on how to get data from the website, and a `.nesstar` file containing the raw data.
 
 The `.nesstar` format is proprietary and requires the software provided to view and export the data into other select formats such as:
 
