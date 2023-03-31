@@ -46,7 +46,7 @@ However, the disadvantage is that without information regarding the layout of th
 
 ## STATA and SPSS file formats
 
-These file formats can be read using the functions from the `haven` package. They take longer to load (with not much observable difference between each other).
+These file formats can be read using functions from the `haven` package. They take longer to load compared to delimited and fixed width files. There is not much observable difference between `.sav` and `.dta` in terms of load time though.
 
 Here is some example code:
 
