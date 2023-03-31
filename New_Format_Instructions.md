@@ -18,17 +18,17 @@ among other formats. I will briefly comment about these three formats alone here
 
 ## Using Nesstar Explorer
 
-The nesstar explorer installer is provided along with the raw data, as I mentioned earlier. However, it comes as an `.exe` file, which is primarily meant for the Windows operating system. However, it is possible to make this run in a GNU/Linux or MacOS system through the use of another software called [wine](https://en.wikipedia.org/wiki/Wine_(software)).
+To extract the raw data from `.nesstar` files, a program called Nesstar Explorer needs to be used. The Nesstar Explorer installer is provided along with the raw data, as I mentioned earlier. However, it comes as an `.exe` file, which is primarily meant for the Windows operating system. However, it is possible to make this run in a GNU/Linux or MacOS system through the use of another software called [wine](https://en.wikipedia.org/wiki/Wine_(software)).
 
 If you are using Microsoft Windows, you can just execute the installer by double clicking it, and following instructions to install the software.
 
-If you are using any version of GNU/Linux, I recommend using this software called [Bottles](https://docs.usebottles.com/getting-started/installation) available as a flatpak package. This is the easiest and most hassle free way to do it. It uses wine, but also has a nice GUI and is very user friendly. There is nothing you need to configure.
+If you are using any version of GNU/Linux, I recommend using this software called [Bottles](https://docs.usebottles.com/getting-started/installation) available as a flatpak package. This is the easiest and most hassle free way to do it. It uses [wine](https://www.winehq.org/), but also has a nice GUI and is very user friendly. There is almost nothing you need to configure.
 
 If you are using MacOS, I hear there are ways to install wine in it, and run the installer through that. Not sure about anything more except that there's a way.
 
 Now on to a brief discussion on the available formats.
 
-## Delimited files
+## Delimited text files
 
 These files have two advantages - they are the smallest sizes to export to, and load the fastest.
 
