@@ -108,7 +108,7 @@ Basically what needs to be done are a couple of things.
 
 I think that is about all. Should be a day's work at most, going through the scripts and making these changes.
 
-Once again, if you do this, please let me know and/or fork the repository (I strongly suggest a GPLv3 license). It's just that I have already done all this work, and I only have half a mind to split this repo into two directories called `Old method` and `New method` or something, and upload all the changes here.
+Once again, if you do this, please let me know and/or fork the repository (I strongly suggest a GPLv3 license). I only have half a mind to split this repo into two directories called `Old method` and `New method` or something, and upload all the changes here. Let's see. I may come around to it. 
 
 Thanks for reading. Consider contributing. Please [reach out](https://twitter.com/all_awry) if anything is not clear enough for you. Feel free to [open an issue](https://github.com/s7u512/NSSO-77-SAS/issues/new) if you come across any.
 
