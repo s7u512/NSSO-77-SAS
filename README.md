@@ -24,7 +24,7 @@ Currently one needs to create an account with MoSPI in order to get access to th
 
 The full list of unit-level datasets and documentation associated with this used to be publicly available [here](https://mospi.gov.in/web/mospi/download-tables-data/-/reports/view/templateFour/25302?q=TBDCAT) or [here](https://mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock). One way to obtain some of the files is through archive.org.
 
-[Reach out] (https://twitter.com/all_awry) for any help/clarifications. 
+[Reach out](https://twitter.com/all_awry) for any help/clarifications. 
 
 
 
