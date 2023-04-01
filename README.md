@@ -42,7 +42,7 @@ In this exercise, we are using unit level data in fixed width files. (Documentat
 
 ### 2.3. Estimation
 
-The goal is to estimate the population and its characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
+This is a sample survey. From the information of the surveyed sample of households, an estimation can be made about the population's information. So, the goal is to estimate the population and its characteristics from the sample data. NSSO provides the weights of the samples to enable this. ([Here](https://unstats.un.org/unsd/demographic/meetings/egm/sampling_1203/docs/no_5.pdf) is a document to understand the concept of sample weights.)
 
 The calculations in these scripts are performed after applying sample weights provided by the NSSO.
 
