@@ -48,7 +48,7 @@ These are the supporting files prepared based on the documentation, for use in t
 
 | File Name                   | Description                                                                                                                                                            |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| List_Level_Codes.xlsx       | Contains the widths of variables for data extraction, specified by NSS in the documentation.                                                                               |
+| List_Level_Codes.xlsx       | Contains the widths of variables for data extraction, specified by NSS in the documentation. This is the only list that is necessary. The rest are optional.                                                                              |
 | List_State.xlsx             | Contains a list of States against codes.                                                                                                                                             |
 | List_Social_Group.xlsx      | Contains a list of social groups against codes.                                                                                                                                      |
 | List_HH_Classification.xlsx | Contains a list of  household classifications against codes.                                                                                  |
