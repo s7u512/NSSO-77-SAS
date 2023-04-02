@@ -1,6 +1,6 @@
 # Estimation Scripts for SAS 2019 (NSSO 77)
 
-These R scripts were developed as a personal project to learn sample survey estimation using [R](https://www.r-project.org/about.html) and [RStudio](https://github.com/rstudio/rstudio). The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work. However, I have ended up deviating enough to not be able to call it a fork anymore, and therefore decided to create my own repository.
+These R scripts were developed as a personal project to learn sample survey estimation using [R](https://www.r-project.org/about.html) and [RStudio](https://github.com/rstudio/rstudio). The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work from scratch. However, I have ended up deviating enough to not be able to call it a fork anymore, and therefore decided to create my own repository.
 
 The scripts are simple and heavily commented to be useful to beginners. Read the [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
 
