@@ -74,6 +74,27 @@ AH_Household_Income_Essentials <- left_join(AH_Household_Income_Essentials, AH_C
 
 
 
+
+# Run another check
+
+
+Average_Incomes_by_Landsize <- AH_Household_Income_Essentials %>% 
+                                  group_by(size_class_of_land_possessed_ha_total) %>%
+                                  summarise(
+                                    wages = wtd.mean(MonthlyWages, weights =  Weights_V2),
+                                    lease = wtd.mean(MonthlyLease_Rent, weights = Weights_V2),
+                                    crop = wtd.mean(MonthlyTotalCropIncome, weights = Weights_V2),
+                                    animal = wtd.mean(MonthlyAnimalIncome, weights = Weights_V2),
+                                    business = wtd.mean(MonthlyNBI, weights = Weights_V2),
+                                    household_income = wtd.mean(Household_Income_Monthly, weights = Weights_V2),
+                                  )
+
+# Table matches the report (check page A-1018 (1196/4264))
+
+
+
+
+
 # That's all folks
 
 # Time to save the files

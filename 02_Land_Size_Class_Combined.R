@@ -36,7 +36,7 @@ Level19Codes <- read_excel("List_Level_Codes.xlsx", sheet = "Level19")
 
 # Load the data for given level from the fixed width file provided into a data frame using the byte lengths provided in the level codes file
 # The name of the data frame has the following logic: Level 4 in Visit 2
-L19_V2 <- read_fwf("Raw data/r77s331v2L04.txt", 
+L19_V2 <- read_fwf("Raw data/r77s331v2L19.txt", 
                   fwf_widths(widths = Level19Codes$Length),
                   col_types = cols(
                     X12 = col_character(),                 #RANT from before
@@ -57,12 +57,14 @@ L19_V2 <- L19_V2 %>%
 # Round off Weights
 L19_V2$Weights_V2 <- round(L19_V2$Weights_V2, digits =1)
 
+# Issue: The following code will show that there are 56818 households recorded in this level (which is 76 less than the total number of households sampled). We will assume they have 0 land. 
+# L19_V2 %>% distinct(HH_ID) %>% n_distinct() 
 
 # DEFINITION: Out of various categories of land reported against a rural household, land which are ‘owned and possessed’, ‘leased-in’ and ‘otherwise possessed’ are combined and termed as ‘land possessed’ by the household. (3.1.2.1 on Page 46 (76/4264))
 
 # This means that we have to add area in serial no.s 1, 2, 3, 4, 6, 7, and 8 for each hh_id
 
-# Create a new data frame with just the land information. 
+# Create a new data frame with just the land information.
 Land_categorization_total <- L19_V2 %>%
   group_by(HH_ID) %>%
   summarise(
@@ -90,7 +92,7 @@ Land_categorization_total$land_possessed_ha_total <- round(
 # Page 23 (51/4264) of the report defines the categories in detail.
 
 # Define the new size classes
-size_classes_list <- c(-0.001, 0.004, 0.404, 1.004, 2.004, 4.004, 10.004, Inf)                                            # We get these values from the table in Page 23 of the report
+size_classes_list <- c(-0.0001, 0.004, 0.404, 1.004, 2.004, 4.004, 10.004, Inf)                                            # We get these values from the table in Page 23 of the report
 size_class_labels_list <- c("< 0.01", "0.01 - 0.40", "0.41 - 1.00", "1.01 - 2.00", "2.01 - 4.00", "4.01 - 10.00", "10+")  # We get these values from the table in Page 23 of the report
 
 # Use the cut() function to categorize the land sizes
@@ -113,7 +115,7 @@ Land_categorization_total <- Land_categorization_total %>%
 
 
 # Replace NAs with 0 to be sure
-Land_categorization_total[is.na(Land_categorization_total)] <- 0
+Land_categorization_total[is.na(Land_categorization_total)] <- 0.000
 
 # Now merge this column and the area column to the Common_HH_Basic data frame.
 
@@ -124,7 +126,7 @@ Common_HH_Basic_with_Land_total <- Common_HH_Basic %>%
     by = "HH_ID"
   )
 
-# Replace the NA values in size_class_of_land_possessed_ha column with the factor "<0.01" as these households have no land and therefore did not feature in the L4 data frame, and subsequently did not feature in the Land_categorization data frame.
+# Replace the NA values in size_class_of_land_possessed_ha column with the factor "<0.01" as these households have no land and therefore did not feature in the L19 data frame, and subsequently did not feature in the Land_categorization data frame.
 levels(Common_HH_Basic_with_Land_total$size_class_of_land_possessed_ha_total) <- c(levels(Common_HH_Basic_with_Land_total$size_class_of_land_possessed_ha_total), "< 0.01")
 Common_HH_Basic_with_Land_total$size_class_of_land_possessed_ha_total[is.na(Common_HH_Basic_with_Land_total$size_class_of_land_possessed_ha_total)] <- "< 0.01"
 
@@ -137,6 +139,7 @@ Common_HH_Basic_with_Land_total[is.na(Common_HH_Basic_with_Land_total)] <- 0
 
 # Make a subset of Agricultural Households
 AH_Common_HH_Basic_with_Land_total <- subset(Common_HH_Basic_with_Land_total, Common_HH_Basic_with_Land_total$value.of.agricultural.production.from.self.employment.activities.during.the.last.365.days.code. == 2)
+
 
 # Save the files
 

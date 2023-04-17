@@ -188,7 +188,7 @@ L4_V1$Weights_V1 <- round(L4_V1$Weights_V1, digits =1)
 
 # DEFINITION: Out of various categories of land reported against a rural household, land which are ‘owned and possessed’, ‘leased-in’ and ‘otherwise possessed’ are combined and termed as ‘land possessed’ by the household. (3.1.2.1 on Page 46 (76/4264))
 
-# This means that we have to add area in serial no.s 1, 2, 3, 4, 6, 7, and 8 for each hh_id
+# This means that we have to sum the area for serial no.s 1, 2, 3, 4  and 6, 7, 8, 9 for each hh_id
 
 # Create a new data frame with just the land information. 
 land_categorization_V1 <- L4_V1 %>%
