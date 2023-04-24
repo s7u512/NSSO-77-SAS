@@ -34,10 +34,8 @@ The analysis can be conducted in the following order:
 
 | File Name                    | Description                                                                                                                                                                                                                                                |
 |------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 01_All_Basic_HH.R            | Creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits.                                                                                                          |
-
-| 02_Land_Size_Class_Combined.R            | Adds land size class to the data.                                   |
-
+| 01_All_Basic_HH.R            | Creates a dataset with some basic information about all the households, and identifies agricultural households that are common across two visits.                                                                                                        |
+| 02_Land_Size_Class_Combined.R            | Adds land size class to the data.                                     |
 | 03_Crop_Income.R             | Calculates the crop income using the paid-out approach.                                                                                                                                                                                                    |
 | 04_Animal_Income.R           | Calculates animal income using the paid-out approach.                                                                                                                                                                                                      |
 | 05_NonFarm_Business_Income.R | Calculates income from non-farm businesses.                                                                                                                                                                                                                |
