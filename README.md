@@ -2,7 +2,9 @@
 
 These R scripts were developed as a personal project to learn sample survey estimation using [R](https://www.r-project.org/about.html) and [RStudio](https://github.com/rstudio/rstudio). The scripts were heavily influenced by my friend [Deepak's work on the same topic](https://github.com/deepakjohnson91/NSSO-77-Round-SAS/). I started out trying to replicate his work from scratch. However, I have ended up deviating enough to not be able to call it a fork anymore, and therefore decided to create my own repository.
 
-The scripts are simple and heavily commented to be useful to beginners. Read the [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
+I have written a [primer on the process](https://fas.org.in/nsso-survey-sas-2019-using-r-for-beginners/) undertaken here, that will be of use to beginners. 
+
+The scripts here are simple and heavily commented to be useful to beginners. Read the [instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started.
 
 These scripts are designed to estimate the results of the Situation Assessment Survey of Agricultural Households conducted by NSSO in 2019 - also known as _*NSS 77 th Round for Schedule- 33.1, January 2019 – December 2019,(Land and Livestock Holding of Households and Situation Assessment of Agricultural Households)*_. Unit-level data along with a report was published by the National Statistical Office in September 2021.
 
@@ -55,8 +57,6 @@ Despite the limited scope, the idea is that if a beginner is able to follow thro
 ## 3. Contents and Usage
 
 Read [these instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/00_Instructions.md) to get started. The R scripts in this repository contain the code and comments for reading, estimating, and conducting basic analysis of the unit-level data from Schedule 33.1 of the 77th round by NSSO. There are a few supporting files prepared based on the documentation, for use in the scripts. I recommend that beginners learn how to create these files on their own. 
-
-I have written a [primer on the process](https://fas.org.in/nsso-survey-sas-2019-using-r-for-beginners/) undertaken here, that will be of use to beginners. 
 
 Read [these instructions](https://github.com/s7u512/NSSO-77-SAS/blob/main/New_Format_Instructions.md) for some help with modifying this script to work with unit-level data in `.nesstar`, `.sav` or `.dta` formats.
 
