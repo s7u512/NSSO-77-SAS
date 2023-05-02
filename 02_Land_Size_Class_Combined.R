@@ -3,7 +3,7 @@
 # Author: Sethu C. A.
 # License: GNU GPLv3
 
-#  This is script an optional extra
+#  This is script 2 of 7
 
 #  Documentation on and data/readme files available at https://www.mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock
 #  Land information is provided in Block 5 in the data, which is in Level 4. I have already added that to the first script for visit 1.

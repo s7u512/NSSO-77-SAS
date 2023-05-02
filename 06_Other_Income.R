@@ -3,7 +3,7 @@
 # Author: Sethu C. A.
 # License: GNU GPLv3
 
-#  This is script 5 of 6
+#  This is script 6 of 7
 #  This work is inspired by Deepak Johnson's work here: https://github.com/deepakjohnson91/NSSO-77-Round-SAS/
 
 #  Documentation on and data/readme files available at https://www.mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock
