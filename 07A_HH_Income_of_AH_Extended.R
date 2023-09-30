@@ -12,7 +12,6 @@
 #  The plan is to load all the pre-arranged datasets and then combine them. 
 #  The reported HH income for all agri HHs is Rs 10,218 per month  (V 1 + V 2).
 
-#  Incomplete - Imputed Animal Costs needed to get Imputed HH Income
 
 rm(list = ls())         # clear the environment
 
