@@ -6,8 +6,8 @@
 #  This is script 2 of 7
 
 #  Documentation on and data/readme files available at https://www.mospi.gov.in/unit-level-data-report-nss-77-th-round-schedule-331-january-2019-%E2%80%93-december-2019land-and-livestock
-#  Land information is provided in Block 5 in the data, which is in Level 4. I have already added that to the first script for visit 1.
-#  This script is to make a data frame that has land size classes for visit 2, so that you can add that to other calculations when required.
+#  Land information is provided in Block 5 in the data, which is in Level 4 in visit 1. I have already added that to the first script for visit 1.
+#  This script is to make a data frame that has land size classes for visit 2 (which is in Level 19 for some reason), so that you can add that to other calculations when required.
 
 
 rm(list = ls())         # clear the environment
@@ -28,14 +28,14 @@ load("Output/Common_HH_Basic.Rdata")
 
 # Task: Get and add land size classification for visit 2 to this
 
-# Land information is provided in Block 5 in the data, which is in Level 4. Let us load this now.
+# Land information is provided in Block 5 in the data, which is in Level 19 for Visit 2. Let us load this now.
 
 # Read the corresponding level codes into a data frame
 Level19Codes <- read_excel("List_Level_Codes.xlsx", sheet = "Level19") 
 
 
 # Load the data for given level from the fixed width file provided into a data frame using the byte lengths provided in the level codes file
-# The name of the data frame has the following logic: Level 4 in Visit 2
+# The name of the data frame has the following logic: Level 19 in Visit 2
 L19_V2 <- read_fwf("Raw data/r77s331v2L19.txt", 
                   fwf_widths(widths = Level19Codes$Length),
                   col_types = cols(
